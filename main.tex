@@ -1,0 +1,43 @@
+%%%%%%%%%
+% ARXIV %
+%%%%%%%%%
+\pdfoutput=1
+
+%%%%%%%%%%%%%%%%%
+% DOCUMENTCLASS %
+%%%%%%%%%%%%%%%%%
+\documentclass[
+  fontsize=12pt,
+  fleqn,
+  %draft,
+  final,
+]{scrartcl}
+
+%%%%%%%%%%%%%%%%
+% CUSTOM STYLE %
+%%%%%%%%%%%%%%%%
+\RequirePackage{metadata/manuscript}
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%
+% METADATA %
+%%%%%%%%%%%%
+\subfile{metadata/titlepage.tex}
+\null{}
+
+%%%%%%%%%%%%
+% SECTIONS %
+%%%%%%%%%%%%
+\subfile{content/sections/introduction.tex}
+\subfile{content/sections/tym.tex}
+
+%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY %
+%%%%%%%%%%%%%%%%
+\printbibliography{}
+
+\end{document}
