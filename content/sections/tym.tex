@@ -51,39 +51,42 @@ And, from them, we can finally read the so-called TYM BRST symmetry transformati
     sF    & = -D\psi - \left[ c, F \right] \;.
   \end{align}
 \end{subequations}
-This is the most general realization of the BRST algebra, capturing the full mathematical structure of traditional gauge theories. It also represent a very strong set of symmetries. In contrast, the much weaker YM BRST of particle physics can be obtained by imposing the so-called \textit{horizontal condition}, $\psi=\phi=0$.
+This is the most general realization of the BRST algebra, capturing the full cohomological structure of traditional gauge theories. It also represents a much stronger set of symmetries than the usual YM BRST from particle physics. The latter can be obtained from the former by imposing the so-called \textit{horizontal conditions}, $\psi=\phi=0$.
 
-The $s$-cohomology forbids the presence of the traditional YM Lagrangian density, $ \tr \left( F \star F \right) $. In fact, it forbids the presence of any $ \mathrm{g} $~metric-contaminated observable. In the absence of spontaneous BRST symmetry breaking, all non-trivial observables are elements in the $s$-cohomology modulo $d$-boundaries. The only non-trivial ones allowed by~\eqref{eq:tym-brst} are of the type
+There are two very important aspects of~\eqref{eq:tym-brst}. First, its Witten index vanishes: the BRST symmetry might be unstable~\cite{witten1982a,fujikawa1983a}. Second, its cohomology groups forbid the presence of any $ \mathrm{g} $ metric-contaminated observable, including the traditional YM Lagrangian density $ \tr \left( F \star F \right) $\footnote{The YM 4-form is $\mathrm{g}$ metric-contaminated due to the explicit presence of the $\star$ operator.}. If the BRST is stable, then all non-trivial observables are elements in the $s$-cohomology modulo $d$-boundaries. In that case, the only allowed ones are
 \begin{equation}\label{eq:tym-observables}
-  \mathcal{O}_k = \tr \left( \tilde{F}^k \right) \; ; \; k \in {\mathbb{N}}^{\ge 1} \;.
+  \mathcal{O}_n = \tr \left( \tilde{F}^n \right) \; ; \; n \in {\mathbb{N}}^{\ge 1} \;.
 \end{equation}
 These invariant polynomials of $\tilde{F}$ can be used to construct the Chern classes of the universal bundle. In other words, they are all topological in nature. In particular,
 \begin{equation}\label{eq:donaldson-polynomials}
   \mathcal{O}_2 = \tr \left[ F^2 + 2\psi F + \left( 2\phi F + \psi^2 \right) + 2\psi \phi + \phi^2\right]
 \end{equation}
-contains, precisely, the Donaldson polynomials evaluated in the seminal works of S.~K.~Donaldson~\cite{donaldson1983a,donaldson1990a}, and E.~Witten~\cite{witten1988d}.
+contains, precisely, the Donaldson polynomials first evaluated in the seminal works of S.~K.~Donaldson~\cite{donaldson1983a,donaldson1990a}, and E.~Witten~\cite{witten1988d} for $N=2$.
 
-Among all allowed observables in~\eqref{eq:tym-observables}, only the (4,0) component of~\eqref{eq:donaldson-polynomials} is suitable for a Lagrangian density at four spacetime dimensions. Thus, the TYM action functional is defined to be
-\begin{equation}\label{eq:tym-action}
-  S_{\text{TYM}}\left[ A \right] \equiv  \int\tr\left( g F^2\right) \;,
+Among all allowed observables in~\eqref{eq:tym-observables}, only the (4,0) component of~\eqref{eq:donaldson-polynomials} is suitable for a Lagrangian density in dimension 4. Thus, the TYM symmetries force the action functional to be
+\begin{equation}%
+  \label{eq:tym-action}
+  S_{\text{TYM}}\left[ A \right]  \equiv  \int \tr\left(F^2\right)
+  = 8 \pi^2 k \;,
 \end{equation}
-where $ g $ is a dimensionless coupling parameter. The Lagrangian density $\tr \left(g F^2 \right)$ is proportional to the 1st Pontryagin number of $\mathbb{R}^4$. And, its integral is proportional to the (compactly supported) Hirzebruch signature of $\mathbb{R}^4$. In other words,~\eqref{eq:tym-action} is a topological  invariant of spacetime.
+where $ k \in \mathbb{Z} $ is the so-called \textit{instanton number}\footnote{The instanton number is generally non-vanishing on $\mathbb{R}^{4}_{\infty}$. It is well-known that $\tr \left(F^2\right)$ is a $d$-cycle, and Poincaré lemma implies it is a $d$-boundary. In fact, $\tr \left(F^2\right) = \tr \left( d \omega^{(3)} \right)$, where $\omega^{(3)} \equiv AdA+\tfrac{2}{3}A^3$ is the famous Chern-Simons 3-form. However, this is a local statement, and the 4th de Rham cohomology group, $ H^4_{\text{dR}} \left( \mathbb{R}^{4}_{\infty}\right) \sim H^4_{\text{dR}} \left( S^{4}\right) \sim \mathbb{Z} $, obstructs this statement to be globally true.} of the gauge field $A$. More precisely, $k$ is the 2nd Chern number of the $SU(N)$-bundle over $\mathbb{R}^{4}_{\infty}$, and on which the principal connection associated with $A$ was originally defined. This is an important distinction because $k$ classifies these bundles. Gauge fields (modulo gauge transformations) are in one-to-one correspondence with them (modulo bundle isomorphisms). In this sense, TYM is explicitly a topological field theory, and~\eqref{eq:tym-action} is explicitly a smooth invariant.
 
-The field equations are trivial ($0=0$), which signals a lack of local dynamics. Instead, TYM has a non-trivial non-local dynamics in the bulk. Many topological field theories can be formulated as fully extended functorial field theories~\cite{atiyah1988a,segal1988a,baez1995a,schreiber2009a,baez2009a}. In this context, their non-local bulk dynamics can be roughly understood as the propagation and scattering of topologically embedded fully extended cobordisms.
+Unsurprisingly, the field equations are trivial ($0=0$), which signals the lack of local bulk dynamics. Many topological field theories can be formulated as fully extended functorial field theories~\cite{atiyah1988a,segal1988a,baez1995a,schreiber2009a,baez2009a}. In this context, their non-local bulk (or boundary) dynamics can be roughly understood as the propagation and scattering of smoothly embedded fully extended cobordisms. Additionally, TYM has energy functional vanishing on the bulk, but not necessary on the celestial sphere at infinity
+\begin{equation}%
+  \label{eq:tym-energy}
+  \varepsilon_{\text{TYM}} [A] = \int_{S^{2}_{\infty}} \tr \left[2\left(\lambda \rfloor A\right)F\right] \;,
+\end{equation}
+where $\lambda$ is the globally constant vector field generating spacetime translations, and $S^{2}_r \equiv \partial B^3_r$ is the 2-sphere boundary of the (\textquote{spacelike}) 3-ball $B^3_r \subset \mathbb{R}^{4}_{\infty} $ of radius $r$. In this sense, every bulk field configuration amounts to the vacua.
 
-\subsection{Quantum properties}\label{ssec:quantum-properties;sec:tym}
-
-A partition function for TYM, formally defined in the weakly coupled regime, requires~\eqref{eq:tym-action} to be gauge fixed. Quantum TYM (QTYM) has been studies in several different gauge choices~\cite{baulieu1988a,myers1990c,brandhuber1994a,piguet1995a,sadovski2017c,sadovski2018a,sadovski2018b}. Here, we adopt the (anti-){}self-dual Landau ((A){}SDL) conditions
+A partition function for TYM, formally defined in the weakly coupled regime, requires~\eqref{eq:tym-action} to be gauge fixed. Quantum TYM (QTYM) has been studies in several different gauge choices~\cite{baulieu1988a,myers1990c,brandhuber1994a,piguet1995a,sadovski2017c,sadovski2018a,sadovski2018b}. A particularly convenient one is the (anti-)self-dual Landau ((A)SDL) conditions
 \begin{subequations}\label{eq:asdlg}
   \begin{align}
     d \star A    & = 0 \;, \\
     d \star \psi & = 0 \;, \\
-    F^{\pm}      & = 0 \,,
+    F^\pm        & = 0 \,,
   \end{align}
 \end{subequations}
-where $ F^{\pm} \equiv F \pm \star F $.
-
-The $ s $-cohomology guarantees that QTYM is free of gauge anomalies~\cite{baulieu1988a}. The (A){}SDL gauge choice is convenient because it results in a very strong set of Ward identities. In this gauge, QTYM is shown to be renormalizable to all orders in perturbation theory. It has only one independent, and non-physical, renormalization~\cite{sadovski2017c}. Moreover, all connected $n$-point Green functions are tree-level exact~\cite{sadovski2018a}. Clearly, this gauge makes evident that QTYM also has no local degrees of freedom. And, due to the lack of loop corrections, the classical observables in~\eqref{eq:tym-observables} maintain their topological nature: the QTYM observables are still Donaldson polynomials.
+where $ F^\pm \equiv F \pm \star F $. This choice localizes our partition function on the very well-behaved $SU(N)$ (anti-)instanton moduli, where the Donaldson invariants were originally formulated via intersection theory. The (A)SDL gauge results in a very strong set of Ward identities. QTYM is shown to be renormalizable to all orders in perturbation theory with only one independent, and non-physical, renormalization~\cite{sadovski2017c}. Moreover, all connected $n$-point Green functions are tree-level exact~\cite{sadovski2018a}. Clearly, this gauge makes evident that QTYM also has no local degrees of freedom. And, due to the lack of loop corrections, the classical observables in~\eqref{eq:tym-observables} maintain their topological nature: the QTYM observables are still the Donaldson polynomials. It is worth mentioning that the $ s $-cohomology guarantees that QTYM is free of gauge anomalies too~\cite{baulieu1988a}.
 
 \begin{table}[htpb]
   \caption{Grading of all TYM-FH fields.}%
