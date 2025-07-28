@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Fujikawa-Higgs variables}%
+\label{sec:higgs}
+The traditional Higgs action functional is $\mathrm{g}$ metric-contaminated, and not an $s$-boundary. This is not an ideal candidate to couple to TYM as it would explicitly break the TYM symmetries. Simultaneously, this naive introduction of a scalar field would give non-vanishing contributions to the Witten index of the surviving (non-topological) BRST symmetry.
+
+In order to preserve the topological field theory nature of TYM, and the interesting possibility of a spontaneous instability of its BRST, we consider the Higgs-like model first proposed by K.~Fujikawa~\cite{fujikawa1983a}. The original work is not in a gauge invariant, so what follows is our gauge invariant generalization of Fujikawa's model, which --- for reasons that will become clear soon --- servers as a natural candidate to couple to TYM\@.
+
+Let us consider two pairs of $\mathrm{ad}P$-valued 0-forms in a BRST doublet structure,
+\begin{subequations}%
+  \label{eq:fh-fields}
+  \begin{align}
+    s \Phi & = - \left[c, \Phi\right] + \xi \;, \\
+    s \xi  & = -\left[c, \xi\right]  \;,        \\
+    s \eta & = - \left[c, \eta\right] + B \;,   \\
+    s B    & = -\left[c, B\right]  \;.
+  \end{align}
+\end{subequations}
+We define the $SU(N)$ gauge invariant adjoint \textquote{Fujikawa-Higgs} (FH) model via the action functional
+\begin{subequations}%
+  \label{eq:fh-action}
+  \begin{align}%
+    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                                    \\
+                                                           & = \int \tr \left\{ \vphantom{m^2} -DB \star D \Phi - D \xi \star D \eta - \left( D \Phi \mathrm{ad}_{\xi} + D \xi \mathrm{ad}_{\Phi} \right) \star \psi \right. + \nonumber \\
+                                                           & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;.
+  \end{align}
+\end{subequations}
+where $m^2$ and $g$ are immediately recognizable as mass and coupling parameters, respectively, while $\star \mathds{1}$ is the unitary volume 4-form on spacetime.
+
+\begin{subequations}%
+  \label{eq:fh-energy}
+  \begin{align}
+    \mathbb{E}_{\text{FH}} \left[\ldots ; r\right] & = \int_{B^3_r} \tr \left\{ \vphantom{m^2} \mathcal{L}_{\lambda} c \star \left( \mathrm{ad}_\Phi  D \xi -  \mathrm{ad}_{\xi} D \Phi \right) + s \left[ \vphantom{m^2} \mathcal{L}_{\lambda} \Phi \star D \xi + D \xi \left(\lambda\rfloor \star D \Phi\right) + \right. \right.\nonumber \\
+                                                   & \left. + \left. \left(\lambda \rfloor A\right) \mathrm{ad}_\xi \star D \Phi + ( \lambda \rfloor \star \mathds{1} ) \xi \Phi [ m^{2} + g \left( B \Phi - \xi \eta \right) ] \right] \right\}                                                                                             \\
+                                                   & =  \int_{B^3_r} \tr \left\{ \vphantom{m^2} \mathcal{L}_{\lambda} \eta \star D \xi - \mathcal{L}_{\lambda} \Phi \star DB + D \xi \left( \lambda \rfloor \star D \eta \right) - DB \left( \lambda \rfloor \star D \Phi \right) + \right.\nonumber                                         \\
+                                                   & +  \left(\lambda \rfloor A \right)  \left[ \mathrm{ad}_\xi \star D \eta + \mathrm{ad}_B \star D \Phi + \left(\mathrm{ad}_\Phi \mathrm{ad}_\xi + \mathrm{ad}_\xi \mathrm{ad}_\Phi \right) \star \psi\right] + \nonumber                                                                  \\
+                                                   & \left. - \left( \lambda \rfloor \star \psi\right) \left( \mathrm{ad}_{\Phi} D \xi - \mathrm{ad}_\xi D \Phi  \right) - ( \lambda \rfloor \star \mathds{1} ) ( V_{\text{FH}} - m^2 \xi \eta - 2g B \Phi \xi \eta ) \right\}
+  \end{align}
+\end{subequations}
+where $\mathcal{L}_{\lambda} = d \lambda \rfloor + \lambda \rfloor d$ is the Lie derivative along $\lambda$. In can be shown that $\mathcal{L}_{\lambda} c = 0$ if $\lambda \rfloor A = 0$ and $ \lambda \rfloor \psi = 0$ (temporal gauge).
+
+\begin{equation}%
+  \label{eq:tymfh-action}
+  S \left[A, \psi, \Phi, \xi, \eta, B \right] = S_{\text{TYM}} + S_{\text{FH}}
+\end{equation}
+
+The energy functional
+\begin{equation}%
+  \label{eq:energy}
+  \mathbb{E} = \mathbb{E}_{\text{TYM}} + \mathbb{E}_{\text{FH}}
+\end{equation}
+
+\begin{table}[htpb]
+  \caption{Grading of all TYM and FH fields.}%
+  \label{tab:gradings}
+  \begin{tabular}{cccccccccccc}
+    \toprule
+    Field      & $A$ & $F$  & $c$ & $\psi$ & $\phi$ & $\Phi$ & $\xi$ & $\eta$ & $B$  \\
+    \midrule
+    Form rank  & 1   & 2    & 0   & 1      & 0      & 0      & 0     & 0      & 0    \\
+    Ghost no.  & 0   & 0    & 1   & 1      & 2      & 0      & 1     & -1     & 0    \\
+    Statistics & odd & even & odd & even   & even   & even   & odd   & odd    & even \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\end{document}

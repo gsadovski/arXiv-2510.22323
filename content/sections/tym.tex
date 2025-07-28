@@ -6,22 +6,22 @@
 
 Let spacetime be $\mathbb{R}^{4}_{\infty}$, endowed with a globally flat metric $\mathrm{g}$. The 4-manifold $\mathbb{R}^{4}_{\infty}$ is the one-point compactification of the standard $\mathbb{R}^4$, compactible with its conformal structure at infinity. This is a convenient choice of background for TYM, because it is compact, Riemannian and 4-dimensional --- necessary conditions for the rigorous definition of the YM instanton\footnote{$\mathbb{R}^{4}_{\infty}$ is also homeomorphic, but not diffeomorphic, to $S^4$. Additionally, $\mathrm{g}$ is conformally equivalent to a round metrics on the 4-sphere. Thus, CFTs on $\left( \mathbb{R}^{4}_{\infty}, \mathrm{g}\right)$ can conveniently pick up non-trivial topological effects, though they are defined on a flat background.}. Due to the nature of topological field theories, we will work with differential forms. For future reference, $\wedge$ is the exterior product\footnote{The tensor product symbol $\otimes$, its fully symmetrized version $\vee$, and its fully anti-symmetrized version $\wedge$, will be omitted whenever the context is sufficiently clear.}, $d$ is the exterior derivative, $v \rfloor$ is the interior product along the smooth vector field $v$, and $\star$ is the Hodge dual. All these operations occur on the exterior algebra $\bigwedge \mathbb{R}^{4}_{\infty}$ of spacetime.
 
-Let $SU(N)$ with Lie algebra $\mathfrak{su}(N)$ be our structure group. This is a physically relevant choice, but also mathematically convenient as $SU(N)$ YM instantons are reasonably well-understood\footnote{The moduli spaces of irreducible self-dual $SU(N)$ connections are finite-dimensional, generically smooth and Kähler. Additionally, $SU(N)$ instantons can be fully classified via the ADHM construction.}. Also for future reference, we define on each event $x \in \mathbb{R}^{4}_{\infty}$ the $\mathbb{Z}_2$ graded\footnote{The grading $|X|$ of $X$ will be the sum mod 2 of its differential form rank and ghost number.} Lie bracket $[X,Y] \equiv XY-(-1)^{|X||Y|}YX$, the adjoint representation $\mathrm{ad}_X (Y) \equiv \left[X, Y\right]$, and the Killing form $\kappa \left(X,Y\right) \equiv \tr \left( \mathrm{ad}_{X} \circ \mathrm{ad}_{Y} \right)$ acting on $X, Y \in \mathfrak{su}(N) \otimes \bigwedge_x \mathbb{R}^{4}_{\infty}$.
+Let $SU(N)$ with Lie algebra $\mathfrak{su}(N)$ be our structure group. This is a physically relevant choice, but also mathematically convenient as $SU(N)$ YM instantons are reasonably well-understood\footnote{The moduli of irreducible self-dual $SU(N)$ connections are finite-dimensional, generically smooth and Kähler. Additionally, $SU(N)$ instantons can be fully classified via the ADHM construction.}. Also for future reference, we define on each event $x \in \mathbb{R}^{4}_{\infty}$ the $\mathbb{Z}_2$ graded\footnote{The grading (or statistics) $|X|$ of $X$, as we will see, will be the sum mod 2 of its differential form rank and its ghost number.} Lie bracket $[X,Y] \equiv XY-{(-1)}^{|X||Y|}YX$, the adjoint representation\footnote{The Lie bracket and the adjoint notation will be used interchangeably to avoid overuse of the squared bracket.} $\mathrm{ad}_X Y \equiv \left[X, Y\right]$, and the Killing form $\kappa \left(X,Y\right) \equiv \tr \left( \mathrm{ad}_{X} \mathrm{ad}_{Y} \right)$ acting on $X, Y \in \mathfrak{su}(N) \otimes \bigwedge_x \mathbb{R}^{4}_{\infty}$.
 
-The full geometrical arena of a $SU(N)$ gauge theory over $\mathbb{R}^{4}_{\infty}$ is that of the universal bundle $\left( SU(N)\times\mathcal{G} \right) \hookrightarrow \left( P \times \mathcal{A} \right) \rightarrow \left( \mathbb{R}^{4}_{\infty} \times\mathcal{A}/\mathcal{G} \right)$~\cite{baulieu1985a,baulieu1988a}. The smooth  $\left(N^2+3\right)$-manifold $P$ is part of the more commonly known principle bundle structure $SU(N) \hookrightarrow P \rightarrow \mathbb{R}^{4}_{\infty}$, together with its adjoint bundles, $ \mathrm{Ad} P \equiv P \times_{SU(N)} SU(N) $ and $ \mathrm{ad}P \equiv P \times_{SU(N)} \mathfrak{su}(N)$. The space of all smooth $SU(N)$-connections on $ P $ is $ \mathcal{A} \equiv C^{ \infty } \left( J^1 P \right) $, where $ J^1 P $ is its 1st jet bundle. The space of all smooth gauge transformations is $ \mathcal{G} \equiv C^{ \infty }\left( \mathrm{Ad}P \right) $, and $ C^{ \infty } \left( \mathrm{ad} P \right) $ is its Lie algebra.
+The full geometrical arena of an $SU(N)$ gauge theory over $\mathbb{R}^{4}_{\infty}$ is that of the universal bundle $[ SU(N)\times\mathcal{G} ] \hookrightarrow ( P \times \mathcal{A} ) \rightarrow ( \mathbb{R}^{4}_{\infty} \times\mathcal{A}/\mathcal{G} )$~\cite{baulieu1985a,baulieu1988a}. The smooth  $(N^2+3)$-manifold $P$ is part of the more commonly known principle bundle structure $SU(N) \hookrightarrow P \rightarrow \mathbb{R}^{4}_{\infty}$, together with its adjoint bundles, $ \mathrm{Ad} P \equiv P \times_{SU(N)} SU(N) $ and $ \mathrm{ad}P \equiv P \times_{SU(N)} \mathfrak{su}(N)$. The space of all smooth $SU(N)$-connections on $ P $ is $ \mathcal{A} \equiv C^{ \infty } ( J^1 P ) $, where $ J^1 P $ is its 1st jet bundle. The space of all smooth gauge transformations is $ \mathcal{G} \equiv C^{ \infty } ( \mathrm{Ad}P ) $, and $ C^{ \infty } ( \mathrm{ad} P ) $ is its Lie algebra.
 
-A gauge field $A(x)$ is traditionally defined as an element of $C^\infty \left( \mathrm{ad}P \otimes \bigwedge^1\mathbb{R}^{4}_{\infty} \right)$ --- an $ \mathrm{ad} P $-valued 1-form field on $\mathbb{R}^{4}_{\infty}$. And, it results from the pullback to spacetime of an $SU(N)$-connection living on $P$. Similarly, an universal gauge field $\tilde{A}(x)$ is the result of a pullback to $\mathbb{R}^{4}_{\infty} \times \mathcal{A}/\mathcal{G}$ of a universal $\left( SU(N) \times \mathcal{G} \right)$-connection living on $P \times \mathcal{A}$. The universal gauge field can be written as
+A gauge field $A(x)$ is defined as an element in $C^\infty ( \mathrm{ad}P \otimes \bigwedge^1\mathbb{R}^{4}_{\infty} )$ --- a $ \mathrm{ad} P $-valued 1-form field on $\mathbb{R}^{4}_{\infty}$ ---, which results from a pullback to spacetime of an $SU(N)$-connection living on $P$. Similarly, a universal gauge field $\tilde{A}(x)$ is defined as the result of a pullback to $\mathbb{R}^{4}_{\infty} \times \mathcal{A}/\mathcal{G}$ of a universal $[SU(N) \times \mathcal{G}]$-connection living on $P \times \mathcal{A}$. And, it can be written as
 \begin{equation}
   \tilde{A} = A + c \;,
 \end{equation}
-where $c(x) \in C^\infty \left( \mathrm{ad}P \otimes \bigwedge^0\mathbb{R}^{4}_{\infty} \right)$ is an $\mathrm{ad}P$-valued 0-form which results from a local projection of the Maurer-Cartan form on $ \mathcal{G} $ --- the well-known Faddeev-Popov ghost field. We can roughly understand $A$ and $c$ as the (1,0) and (0,1) component of $\tilde{A}$, respectively, in relation to the product $\mathbb{R}^{4}_{\infty} \times \mathcal{A}/\mathcal{G}$.
+where $c(x) \in C^\infty ( \mathrm{ad}P \otimes \bigwedge^0\mathbb{R}^{4}_{\infty} )$ is a $\mathrm{ad}P$-valued 0-form which results from a local projection of the Maurer-Cartan form on $ \mathcal{G} $ --- the well-known Faddeev-Popov ghost field. We can roughly understand $A$ and $c$ as the (1,0) and (0,1) component of $\tilde{A}$, respectively, in relation to the product $\mathbb{R}^{4}_{\infty} \times \mathcal{A}/\mathcal{G}$.
 
-The exterior derivative $\tilde{d}$ on $\mathbb{R}^4 \times \mathcal{A}/\mathcal{G}$ can be written as
+The exterior derivative $\tilde{d}$ on $\mathbb{R}^4 \times \mathcal{A}/\mathcal{G}$ can also be \textquote{decomposed} with respect to this product, resulting in
 \begin{equation}%
   \label{eq:universal-exterior-derivative}
   \tilde{d} = d + s \;,
 \end{equation}
-where $s$ is the exterior derivative on $\mathcal{G}$ --- the well-known BRST operator. The $\mathbb{Z}_2$ graded exterior algebra we already mentioned is defined by $\tilde{d}$, which gives the meaning of an 1-form with ghost number 0, and a 0-form with ghost number 1, respectively, to $ \left( 1,0 \right) $, and $ \left( 0,1 \right) $. Accordingly, the grading (statistics) of $A$, and $c$, is odd (fermionic) --- the grading of all fields can be found at Table~\ref{tab:gradings}. Additionally, $\tilde{d}$, $d$, and $s$ are all nilpotent operators by definition. Equation~\eqref{eq:universal-exterior-derivative} resumes to $sd+ds=0$, which means $d$ and $s$ are fermionic operators.
+where $s$ is the exterior derivative on $\mathcal{G}$ --- the well-known BRST operator. The $\mathbb{Z}_2$ grading already mentioned is defined by $\tilde{d}$, which gives the meaning of an 1-form with ghost number 0, and a 0-form with ghost number 1, respectively, to $ \left( 1,0 \right) $, and $ \left( 0,1 \right) $. Accordingly, the statistics of $A$, and $c$, is odd (fermionic) --- all field statistics can be found at Table~\ref{tab:gradings}. Additionally, $\tilde{d}$, $d$, and $s$ are all nilpotent operators by definition. Equation~\eqref{eq:universal-exterior-derivative} resumes to $sd+ds=0$, which means $d$ and $s$ are fermionic operators.
 
 The universal curvature $ \tilde{F} $ of $\tilde{A}$ is given by
 \begin{subequations}%
@@ -31,14 +31,14 @@ The universal curvature $ \tilde{F} $ of $\tilde{A}$ is given by
               & = F+\psi+\phi \;,
   \end{align}
 \end{subequations}
-and it has the curvature $F\equiv dA+A^2$ of $A$ as the (2,0) component, the so-called \emph{topological ghost field} $\psi \equiv sA + Dc$ as the (1,1) component, and the \emph{2nd generation topological ghost field} $\phi \equiv sc + c^2$ as (0,2) component. We have to mention that $D \equiv d+ \mathrm{ad}_A$ is the exterior covariant derivative in the adjoint representation.
+and it has the curvature $F\equiv dA+A^2$ of $A$ as the (2,0) component, the so-called \emph{topological ghost field} $\psi \equiv sA + Dc$ as the (1,1) component, and the \emph{2nd generation topological ghost field} $\phi \equiv sc + c^2$ as (0,2) component. We have to mention that $D \equiv d+ \left[A, \hphantom{A}\right] $ is the exterior covariant derivative in the adjoint representation.
 
 The Bianchi identities for $\tilde{F}$, and $F$, give
-\begin{subequations}
+\begin{subequations}%
   \label{eq:universal-bianchi-identity}
   \begin{align}
     \tilde{D}\tilde{F}          & =0 \;,  \\
-    sF+D\psi+\left[ c,F \right] & = 0 \;.
+    sF+D\psi+ \left[c, F\right] & = 0 \;.
   \end{align}
 \end{subequations}
 And, from them, we can finally read the so-called TYM BRST symmetry transformations~\cite{baulieu1988a},
@@ -46,9 +46,9 @@ And, from them, we can finally read the so-called TYM BRST symmetry transformati
   \begin{align}
     sA    & = -Dc + \psi \;,                      \\
     sc    & = - c^2 + \phi \;,                    \\
-    s\psi & = -D\phi - \left[ c, \psi \right] \;, \\
-    s\phi & = - \left[ c, \phi \right]\;,         \\
-    sF    & = -D\psi - \left[ c, F \right] \;.
+    s\psi & = -D\phi -  \left[c, \psi\right]  \;, \\
+    s\phi & = - \left[ c, \phi \right]  \;,       \\
+    sF    & = -D\psi - \left[ c, F \right]   \;.
   \end{align}
 \end{subequations}
 This is the most general realization of the BRST algebra, capturing the full cohomological structure of traditional gauge theories. It also represents a much stronger set of symmetries than the usual YM BRST from particle physics. The latter can be obtained from the former by imposing the so-called \textit{horizontal conditions}, $\psi=\phi=0$.
@@ -71,10 +71,10 @@ Among all allowed observables in~\eqref{eq:tym-observables}, only the (4,0) comp
 \end{equation}
 where $ k \in \mathbb{Z} $ is the so-called \textit{instanton number}\footnote{The instanton number is generally non-vanishing on $\mathbb{R}^{4}_{\infty}$. It is well-known that $\tr \left(F^2\right)$ is a $d$-cycle, and Poincaré lemma implies it is a $d$-boundary. In fact, $\tr \left(F^2\right) = \tr \left( d \omega^{(3)} \right)$, where $\omega^{(3)} \equiv AdA+\tfrac{2}{3}A^3$ is the famous Chern-Simons 3-form. However, this is a local statement, and the 4th de Rham cohomology group, $ H^4_{\text{dR}} \left( \mathbb{R}^{4}_{\infty}\right) \sim H^4_{\text{dR}} \left( S^{4}\right) \sim \mathbb{Z} $, obstructs this statement to be globally true.} of the gauge field $A$. More precisely, $k$ is the 2nd Chern number of the $SU(N)$-bundle over $\mathbb{R}^{4}_{\infty}$, and on which the principal connection associated with $A$ was originally defined. This is an important distinction because $k$ classifies these bundles. Gauge fields (modulo gauge transformations) are in one-to-one correspondence with them (modulo bundle isomorphisms). In this sense, TYM is explicitly a topological field theory, and~\eqref{eq:tym-action} is explicitly a smooth invariant.
 
-Unsurprisingly, the field equations are trivial ($0=0$), which signals the lack of local bulk dynamics. Many topological field theories can be formulated as fully extended functorial field theories~\cite{atiyah1988a,segal1988a,baez1995a,schreiber2009a,baez2009a}. In this context, their non-local bulk (or boundary) dynamics can be roughly understood as the propagation and scattering of smoothly embedded fully extended cobordisms. Additionally, TYM has energy functional vanishing on the bulk, but not necessary on the celestial sphere at infinity
+Unsurprisingly, the field equations are trivial ($0=0$), which signals the lack of local bulk dynamics. Many topological field theories can be formulated as fully extended functorial field theories~\cite{atiyah1988a,segal1988a,baez1995a,schreiber2009a,baez2009a}. In this context, their non-local bulk (or boundary) dynamics can be roughly understood as the propagation and scattering of smoothly embedded fully extended cobordisms. Additionally, TYM has vanishing (pure gauge) energy functional on the bulk, but not necessary on the celestial sphere at infinity
 \begin{equation}%
   \label{eq:tym-energy}
-  \varepsilon_{\text{TYM}} [A] = \int_{S^{2}_{\infty}} \tr \left[2\left(\lambda \rfloor A\right)F\right] \;,
+  \lim_{ r \to \infty}  \mathbb{E}_{\text{TYM}} [A; r] = \int_{S^{2}_{\infty}} \tr \left[2\left(\lambda \rfloor A\right)F\right] \;,
 \end{equation}
 where $\lambda$ is the globally constant vector field generating spacetime translations, and $S^{2}_r \equiv \partial B^3_r$ is the 2-sphere boundary of the (\textquote{spacelike}) 3-ball $B^3_r \subset \mathbb{R}^{4}_{\infty} $ of radius $r$. In this sense, every bulk field configuration amounts to the vacua.
 
@@ -88,17 +88,4 @@ A partition function for TYM, formally defined in the weakly coupled regime, req
 \end{subequations}
 where $ F^\pm \equiv F \pm \star F $. This choice localizes our partition function on the very well-behaved $SU(N)$ (anti-)instanton moduli, where the Donaldson invariants were originally formulated via intersection theory. The (A)SDL gauge results in a very strong set of Ward identities. QTYM is shown to be renormalizable to all orders in perturbation theory with only one independent, and non-physical, renormalization~\cite{sadovski2017c}. Moreover, all connected $n$-point Green functions are tree-level exact~\cite{sadovski2018a}. Clearly, this gauge makes evident that QTYM also has no local degrees of freedom. And, due to the lack of loop corrections, the classical observables in~\eqref{eq:tym-observables} maintain their topological nature: the QTYM observables are still the Donaldson polynomials. It is worth mentioning that the $ s $-cohomology guarantees that QTYM is free of gauge anomalies too~\cite{baulieu1988a}.
 
-\begin{table}[htpb]
-  \caption{Grading of all TYM-FH fields.}%
-  \label{tab:gradings}
-  \begin{tabular}{cccccccccccc}
-    \toprule
-    Field      & $A$ & $F$  & $c$ & $\psi$ & $\phi$ & $\Phi$ & $\xi$ & $\eta$ & $B$  \\
-    \midrule
-    Form rank  & 1   & 2    & 0   & 1      & 0      & 0      & 0     & 0      & 0    \\
-    Ghost no.  & 0   & 0    & 1   & 1      & 2      & 0      & 1     & -1     & 0    \\
-    Statistics & odd & even & odd & even   & even   & even   & odd   & odd    & even \\
-    \bottomrule
-  \end{tabular}
-\end{table}
 \end{document}
