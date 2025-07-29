@@ -4,11 +4,11 @@
 
 \section{Fujikawa-Higgs variables}%
 \label{sec:higgs}
-The traditional Higgs action functional is $\mathrm{g}$ metric-contaminated, and not an $s$-boundary. This is not an ideal candidate to couple to TYM as it would explicitly break the TYM symmetries. Simultaneously, this naive introduction of a scalar field would give non-vanishing contributions to the Witten index of the surviving (non-topological) BRST symmetry.
+The traditional Higgs action functional is $\mathrm{g}$ metric-contaminated, and not an $s$-boundary. This is not an ideal candidate to couple to TYM as it would explicitly break the TYM symmetries. Simultaneously, this naive introduction of a scalar field would give non-vanishing contributions to the Witten index of the surviving (and no longer topological) BRST symmetry.
 
 In order to preserve the topological field theory nature of TYM, and the interesting possibility of a spontaneous instability of its BRST, we consider the Higgs-like model first proposed by K.~Fujikawa~\cite{fujikawa1983a}. The original work is not in a gauge invariant, so what follows is our gauge invariant generalization of Fujikawa's model, which --- for reasons that will become clear soon --- servers as a natural candidate to couple to TYM\@.
 
-Let us consider two pairs of $\mathrm{ad}P$-valued 0-forms in a BRST doublet structure,
+Let us consider two pairs of $\mathrm{ad}P$-valued 0-forms in $s$-doublet structures,
 \begin{subequations}%
   \label{eq:fh-fields}
   \begin{align}
@@ -22,12 +22,40 @@ We define the $SU(N)$ gauge invariant adjoint \textquote{Fujikawa-Higgs} (FH) mo
 \begin{subequations}%
   \label{eq:fh-action}
   \begin{align}%
-    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                                    \\
-                                                           & = \int \tr \left\{ \vphantom{m^2} -DB \star D \Phi - D \xi \star D \eta - \left( D \Phi \mathrm{ad}_{\xi} + D \xi \mathrm{ad}_{\Phi} \right) \star \psi \right. + \nonumber \\
-                                                           & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;.
+    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                      \label{eq:fh-action-1} \\
+                                                           & = \int \tr \left\{ \vphantom{m^2} -DB \star D \Phi - D \xi \star D \eta - \left( D \Phi \mathrm{ad}_{\xi} + D \xi \mathrm{ad}_{\Phi} \right) \star \psi \right. + \nonumber          \\
+                                                           & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;,
   \end{align}
 \end{subequations}
-where $m^2$ and $g$ are immediately recognizable as mass and coupling parameters, respectively, while $\star \mathds{1}$ is the unitary volume 4-form on spacetime.
+where $m^2$ and $g$ are immediately recognizable as mass and coupling parameters, respectively, while $\star \mathds{1}$ is the unitary volume 4-form on spacetime. This quartet of scalar fields, introduced in this way, can only generate invariant polynomials which are $s$-boundaries. This is a well-known theorem of the BRST algebra, which immediately justifies\footnote{In full disclosure, it only partially justifies~\eqref{eq:fh-action-1} as it is not the most general $s$-boundary we could have built out of $\Phi, \xi, \eta$ and $B$. Adding more terms probably benefits its renormalizability properties, but do not significantly alter its symmetry breaking results.}~\eqref{eq:fh-action-1} and implies the $s$-cohomology groups are preserved --- no new observables are introduced, especially $\mathrm{g}$ metric-contaminated ones. Additionally, $s$-doublets give vanishing contributions to the Witten index of $s$, thus also preserving the possibility of BRST instability.
+
+In this work, we will focus on the bosonic potential
+\begin{equation}%
+  \label{eq:potential}
+  V_{\text{FH}} \left(B, \Phi\right) = \tr \left[m^2 B \Phi + g {( B \Phi )}^2\right]
+\end{equation}
+which has non-trivial local minima
+\begin{subequations}%
+  \label{eq:minima}
+  \begin{align}
+    B_0    & \equiv \mathrm{diag} \left(b_1, \cdots, b_N \right) \;,             \\
+    \Phi_0 & \equiv \mathrm{diag} \left(\varphi_1, \cdots, \varphi_N \right) \;,
+  \end{align}
+\end{subequations}
+such that each pair of eigenvalues $(b_j, \varphi_j)$ satisfies
+\begin{subequations}%
+  \label{eq:eigenvalues-conditions}
+  \begin{align}
+    m^2 b_j + 2g b_j^2 \varphi_j +\alpha        & = 0 \;,  \\
+    m^2 \varphi_j + 2g b_j \varphi_j^2  + \beta & = 0 \;,  \\
+    \textstyle\sum_{j} b_j                      & = 0 \;,  \\
+    \textstyle \sum_j \varphi_j                 & = 0 \;,  \\
+    D_k                                         & > 0  \;.
+  \end{align}
+\end{subequations}
+Einstein sum convention is not assumed, and indexes run as $j \in \left\{ 1, \ldots, N \right\} $, $k \in \left\{ 5, \ldots, 2+2N \right\} $; $\alpha, \beta \in \mathbb{R}$ are Lagrange multipliers, and $D_k$ is the determinant of the leading $k \times k $ principal minor of the bordered Hessian of $V_{\text{FH}}$. These look awfully more involved than the traditional adjoint Higgs. This is because these are sufficient but not always necessary conditions on the minima of $V_{\text{FH}}$ under the traceless constraints of $\mathfrak{su}(N)$ matrices. If $N=2$, then only one independent Casimir operator exists, and $\tr [ (B \Phi)^2 ] \propto [\tr (B \Phi)]^2$. Solving~\eqref{eq:eigenvalues-conditions} directly can then be avoided by using this fact to \textquote{complete the square} in~\eqref{eq:potential}.
+
+Just like the adjoint Higgs, $B_0$ and $\Phi_0$ belongs to the Cartan subalgebra $\mathfrak{h}$ of $\mathfrak{su}(N)$. The conditions
 
 \begin{subequations}%
   \label{eq:fh-energy}
