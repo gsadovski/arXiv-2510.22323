@@ -1,0 +1,80 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Fundamental Fujikawa-Higgs variables with BRST and gauge symmetry breaking}%
+\label{sec:higgs}
+Now, let us consider the Fujikawa-Higgs doublets in  the fundamental representation of $\mathfrak{su}(N)$. For that, we reintroduce the quartet as $E$-valued 0-forms, where $E \equiv P \times_{SU(N)} V$ is an associated vector bundle, and $V$ is an $N$-dimensional representation space of $SU(N)$. The BRST algebra is
+\begin{subequations}%
+  \label{eq:ffh-fields}
+  \begin{align}
+    s \Phi & = - c \Phi + \eta \;, \\
+    s \eta & = - c \eta  \;,       \\
+    s \xi  & = - c \xi + B \;,     \\
+    s B    & = - c B  \;.
+  \end{align}
+\end{subequations}
+Similarly, the gauge invariant action is given by
+\begin{subequations}%
+  \label{eq:ffh-action}
+  \begin{align}%
+    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                      \label{eq:fh-action-1} \\
+                                                           & = \int \tr \left\{ \vphantom{m^2} -DB \star D \Phi - D \xi \star D \eta + \left( \mathrm{ad}_{\Phi}D \xi - \mathrm{ad}_{\xi} D \Phi \right) \star \psi \right. + \nonumber           \\
+                                                           & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;,
+  \end{align}
+\end{subequations}
+
+The potential
+\begin{equation}%
+  \label{eq:ffh-potential}
+  V_{\text{FH}} \left(B, \Phi\right) = m^2 B^{\dagger} \Phi + g {( B^{\dagger} \Phi )}^2
+\end{equation}
+which has non-trivial local minima $(B_0, \Phi_0)$ satisfying $B^{\dagger}_0\Phi_0 = -m^2/2g$.
+
+The relevant moduli is $\mathcal{M} = [\mathcal{A} \times C^{\infty}(E)]/\mathcal{G}$
+
+The gauge symmetry breaking pattern is the same as the usual adjoint Higgs model. The vacua $(B_0, \Phi_0)$ belong to the Cartan subalgebra $\bigoplus^{N-1} \mathfrak{u}(1)$, and has stabilizer $\mathfrak{h}_0 \equiv \left\{ X \in \mathfrak{su}(N) \; ; \; \mathrm{ad}_{B_0} X = 0, \;\mathrm{ad}_{\Phi_0} X = 0\right\} $ in the vacua moduli. In the trivial neighborhood $\mathfrak{h}_0 \sim \mathfrak{su}(N)$, and away from it spontaneous gauge symmetry breaking occurs, $\mathfrak{h}_0 \subset \mathfrak{su}(N)$. In particular, if the multiplicity $n_j=1$ for all $(b_j, \varphi_j)$ (non-degeneracy), then $\mathfrak{h}_0 \sim \bigoplus^{N-1} \mathfrak{u}(1)$. More generally, if $l \in \left\{1, \ldots, m\right\} $ labels distinct pairs of eigenvalues, and $1 < n_l \leq N \; ; \; \sum_l n_l = N$ (degeneracy), then $\mathfrak{h}_0 \sim \bigoplus_l \mathfrak{su}(n_l) \oplus \bigoplus^{m-1} \mathfrak{u}(1)$. It is worth mentioning that the trivial neighborhood has complete degeneracy ($m=1$).
+
+Away from the trivial vacuum, $S_{\text{FH}}$ assumes the form
+\begin{align}%
+  % \label{eq:eff-action}
+  \bar{S}[A, \psi, \phi, \xi, \eta, b] & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) D \star A  \right. +  \nonumber           \\
+                                       & - \left( \mathrm{ad}_{B_0} \mathrm{ad}_{A} \phi + \mathrm{ad}_{\Phi_0} \mathrm{ad}_{A} b \right) \star A + \mathrm{ad}_{\Phi_0} \xi D \star \psi + ( \mathrm{ad}_{\phi} D \xi \; +  \nonumber \\
+                                       & - \mathrm{ad}_{\xi} D \phi + 2 \mathrm{ad}_{\Phi_0}\mathrm{ad}_{A} \xi ) \star \psi - Db \star D \phi - D \xi \star D \eta \; + \nonumber                                                     \\
+                                       & + \left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 + b \phi \right)}^2 \right. +  \nonumber                                                    \\
+                                       & \left. - \left. 2g \left(B_0 \phi + b \Phi_0 + b \phi \right) \xi \eta \vphantom{m^2} \right] \star \mathds{1} \right\}
+\end{align}
+where $\bar{S} \equiv S_{\text{FH}} [A, \psi, \Phi_0 + \phi, \xi, \eta, B_0 + b]$, with quadratic part defined by
+\begin{align}%
+  % \label{eq:eff-quad-action}
+  \bar{S}^{(2)} & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) d \star A + \mathrm{ad}_{\Phi_0} \xi d \star \psi \right. +  \nonumber \\
+                & - \left. db \star d\phi - d\xi \star d\eta +\left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 \right)}^2 \right] \star \mathds{1} \right\} \;.
+\end{align}
+Clearly, $\mathrm{ad}_{B_0}\mathrm{ad}_{\Phi_0}$ is the mass matrix acquired by $A$ due to the spontaneous gauge symmetry breaking. The bosonic pair $(b, \phi)$ plays the role of the Higgs boson field and remains massive. The fermionic pair $(\eta,\xi)$ also remains massive and indicates the BRST is not spontaneously broken.
+
+The second and third term can be eliminated via the (A)SDL gauge fixing. Mean
+\begin{subequations}%
+  % \label{eq:fh-energy}
+  \begin{align}
+    \mathbb{E}_{\text{FH}} \left[\ldots ; r\right] & = \int_{B^3_r} \tr \left\{ \vphantom{m^2} \mathcal{L}_{\lambda} c \star \left( \mathrm{ad}_\Phi  D \xi -  \mathrm{ad}_{\xi} D \Phi \right) + s \left[ \vphantom{m^2} \mathcal{L}_{\lambda} \Phi \star D \xi + D \xi \left(\lambda\rfloor \star D \Phi\right) + \right. \right.\nonumber \\
+                                                   & \left. + \left. \left(\lambda \rfloor A\right) \mathrm{ad}_\xi \star D \Phi + ( \lambda \rfloor \star \mathds{1} ) \xi \Phi [ m^{2} + g \left( B \Phi - \xi \eta \right) ] \right] \right\}                                                                                             \\
+                                                   & =  \int_{B^3_r}\left\{ \tr \left[ \vphantom{m^2} \mathcal{L}_{\lambda} \eta \star D \xi - \mathcal{L}_{\lambda} \Phi \star DB + D \xi \left( \lambda \rfloor \star D \eta \right) - DB \left( \lambda \rfloor \star D \Phi \right) \right. + \right.\nonumber                           \\
+                                                   & + \left(\lambda \rfloor A \right)  \left[ \mathrm{ad}_\xi \star D \eta + \mathrm{ad}_B \star D \Phi + \left(\mathrm{ad}_\Phi \mathrm{ad}_\xi + \mathrm{ad}_\xi \mathrm{ad}_\Phi \right) \star \psi\right] + \nonumber                                                                   \\
+                                                   & - \left. \left( \lambda \rfloor \star \psi\right) \left( \mathrm{ad}_{\Phi} D \xi - \mathrm{ad}_\xi D \Phi  \right) - ( \lambda \rfloor \star \mathds{1} ) (m^2 \xi \eta + 2g B \Phi \xi \eta ) \right] + \nonumber                                                                     \\
+                                                   & + \left.  ( \lambda \rfloor \star \mathds{1} ) V_{\text{FH}} \vphantom{m^2} \right\}
+  \end{align}
+\end{subequations}
+where $\mathcal{L}_{\lambda} = d \lambda \rfloor + \lambda \rfloor d$ is the Lie derivative along $\lambda$. In can be shown that $\mathcal{L}_{\lambda} c = 0$ if $\lambda \rfloor A = 0$ and $ \lambda \rfloor \psi = 0$ (temporal gauge).
+
+\begin{equation}%
+  % \label{eq:tymfh-action}
+  S \left[A, \psi, \Phi, \xi, \eta, B \right] = S_{\text{TYM}} + S_{\text{FH}}
+\end{equation}
+
+The energy functional
+\begin{equation}%
+  % \label{eq:energy}
+  \mathbb{E} = \mathbb{E}_{\text{TYM}} + \mathbb{E}_{\text{FH}}
+\end{equation}
+
+\end{document}
