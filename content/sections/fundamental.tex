@@ -2,32 +2,37 @@
 
 \begin{document}
 
-\section{Fundamental Fujikawa-Higgs with BRST instability}%
+\section{Fujikawa-Higgs with BRST instability}%
 \label{sec:higgs}
-Now, let us consider the Fujikawa-Higgs doublets in  the fundamental representation of $\mathfrak{su}(N)$. For that, we reintroduce the quartet as $E$-valued 0-forms, where $E \equiv P \times_{SU(N)} V$ is an associated vector bundle, and $V$ is an $N$-dimensional representation space of $SU(N)$. The BRST algebra is
+
+Now, let us consider the Fujikawa-Higgs doublet fields in  the fundamental representation of $SU(N)$. For that, we introduce the associated vector bundle $E \equiv P \times_{SU(N)} \mathbb{C}^N$, its endomorphism bundle $\mathrm{End}(E) \equiv P \times_{SU(N)} \mathrm{End}(\mathbb{C}^N)$, and automorphism bundle $\mathrm{Aut}(E) \equiv P \times_{SU(N)} \mathrm{Aut}(\mathbb{C}^N)$. Then $\mathcal{G}$ has faithful representation in $\mathrm{Aut}(E)$, and $\mathrm{Lie(\mathcal{G})}$ in $\mathrm{End}(E)$. The TYM fields $(A, c, \psi, \phi)$ are now elements in $C^{\infty}(\mathrm{End}(E) \otimes \bigwedge \mathbb{R}^4_{\infty} )$, while the Fujikawa-Higgs fields $(\Phi, \eta, \xi, B)$ are elements in $ C^{\infty}(E \otimes \bigwedge^0 \mathbb{R}^4_{\infty} )$.
+
+The BRST algebra is given by
 \begin{subequations}%
   \label{eq:ffh-fields}
   \begin{align}
-    s \Phi & = - c \Phi + \eta \;, \\
-    s \eta & = - c \eta  \;,       \\
-    s \xi  & = - c \xi + B \;,     \\
-    s B    & = - c B  \;.
+    s \Phi & = - c \Phi + \eta \;, & s \Phi^{\dagger} & = \Phi^{\dagger} c + \eta^{\dagger} \;,            & \hspace{100pt} \\
+    s \eta & = - c \eta  \;,       & s \eta^{\dagger} & =  - \eta^{\dagger} c                 \;,          & \hspace{100pt} \\
+    s \xi  & = - c \xi + B \;,     & s \xi^{\dagger}  & = - \xi^{\dagger} c + B^{\dagger}              \;, & \hspace{100pt} \\
+    s B    & = - c B  \;,          & s B^{\dagger}    & = B^{\dagger} c                  \;.               & \hspace{100pt}
   \end{align}
 \end{subequations}
-Similarly, the gauge invariant action is given by
+where ${}^{\dagger}$ is defined via the canonical Hermitian metric on $E$. As usual, on $\mathrm{End}(E)$-valued fields it means Hermitian adjoint\footnote{In our convention, all TYM fields are anti-Hermitian.}, on $E$-valued fields conjugate transpose, and on $\mathbb{C}$-valued fields just conjugate.
+
+In full analogy with the adjoint model, we defined the $SU(N)$ \textquote{Fujikawa-Higgs} model via the action
 \begin{subequations}%
   \label{eq:ffh-action}
   \begin{align}%
-    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                                   \\
-                                                           & = \int \tr \left\{ \vphantom{m^2} -DB \star D \Phi - D \xi \star D \eta + \left( \mathrm{ad}_{\Phi}D \xi - \mathrm{ad}_{\xi} D \Phi \right) \star \psi \right. + \nonumber \\
-                                                           & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;,
+    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \mathfrak{Re}\left\{(D \xi)^{\dagger} \star D \Phi + {\xi}^{\dagger} \Phi \left[m^2 + g \left({B}^{\dagger} \Phi - {\xi}^{\dagger} \eta\right)\right] \star \mathds{1} \right\} \;,                            \\
+                                                           & = \int \re \left\{ \vphantom{m^2} -{(DB)}^{\dagger} \star D \Phi - {(D \xi)}^{\dagger} \star D \eta + {(D \Phi)}^{\dagger} \star \psi \xi  \right. + \nonumber                                                               \\
+                                                           & + \left. {(D \xi)}^{\dagger} \star \psi \Phi + \left[ m^2 \left( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta \right) + g {\left( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;,
   \end{align}
 \end{subequations}
 
 The potential
 \begin{equation}%
   \label{eq:ffh-potential}
-  V_{\text{FH}} \left(B, \Phi\right) = m^2 B^{\dagger} \Phi + g {( B^{\dagger} \Phi )}^2
+  V_{\text{FH}} \left(B, \Phi\right) = \re \left[m^2 B^{\dagger} \Phi + g {( B^{\dagger} \Phi )}^2\right]
 \end{equation}
 which has non-trivial local minima $(B_0, \Phi_0)$ satisfying $B^{\dagger}_0\Phi_0 = -m^2/2g$.
 
