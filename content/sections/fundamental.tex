@@ -3,9 +3,9 @@
 \begin{document}
 
 \section{Fujikawa-Higgs with BRST instability}%
-\label{sec:higgs}
+\label{sec:fund-higgs}
 
-Now, let us consider the Fujikawa-Higgs doublet fields in  the fundamental representation of $SU(N)$. For that, we introduce the associated vector bundle $E \equiv P \times_{SU(N)} \mathbb{C}^N$, its endomorphism bundle $\mathrm{End}(E) \equiv P \times_{SU(N)} \mathrm{End}(\mathbb{C}^N)$, and automorphism bundle $\mathrm{Aut}(E) \equiv P \times_{SU(N)} \mathrm{Aut}(\mathbb{C}^N)$. Then $\mathcal{G}$ has faithful representation in $\mathrm{Aut}(E)$, and $\mathrm{Lie(\mathcal{G})}$ in $\mathrm{End}(E)$. The TYM fields $(A, c, \psi, \phi)$ are now elements in $C^{\infty}(\mathrm{End}(E) \otimes \bigwedge \mathbb{R}^4_{\infty} )$, while the Fujikawa-Higgs fields $(\Phi, \eta, \xi, B)$ are elements in $ C^{\infty}(E \otimes \bigwedge^0 \mathbb{R}^4_{\infty} )$.
+Now, let us consider the Fujikawa-Higgs doublet fields in  the fundamental representation of $SU(N)$. For that, we introduce the associated vector bundle $E \equiv P \times_{SU(N)} \mathbb{C}^N$, its endomorphism bundle $\mathrm{End}(E) \equiv P \times_{SU(N)} \mathrm{End}(\mathbb{C}^N)$, and automorphism bundle $\mathrm{Aut}(E) \equiv P \times_{SU(N)} \mathrm{Aut}(\mathbb{C}^N)$. Then $\mathcal{G}$ has faithful representation in $\mathrm{Aut}(E)$, and $\mathrm{Lie(\mathcal{G})}$ has it in $\mathrm{End}(E)$. The TYM fields $(A, c, \psi, \phi)$ are now elements in $C^{\infty}(\mathrm{End}(E) \otimes \bigwedge \mathbb{R}^4_{\infty} )$, while the Fujikawa-Higgs fields $(\Phi, \eta, \xi, B)$ are elements in $ C^{\infty}(E \otimes \bigwedge^0 \mathbb{R}^4_{\infty} )$.
 
 The BRST algebra is given by
 \begin{subequations}%
@@ -14,48 +14,107 @@ The BRST algebra is given by
     s \Phi & = - c \Phi + \eta \;, & s \Phi^{\dagger} & = \Phi^{\dagger} c + \eta^{\dagger} \;,            & \hspace{100pt} \\
     s \eta & = - c \eta  \;,       & s \eta^{\dagger} & =  - \eta^{\dagger} c                 \;,          & \hspace{100pt} \\
     s \xi  & = - c \xi + B \;,     & s \xi^{\dagger}  & = - \xi^{\dagger} c + B^{\dagger}              \;, & \hspace{100pt} \\
-    s B    & = - c B  \;,          & s B^{\dagger}    & = B^{\dagger} c                  \;.               & \hspace{100pt}
+    s B    & = - c B  \;,          & s B^{\dagger}    & = B^{\dagger} c                  \;,               & \hspace{100pt}
   \end{align}
 \end{subequations}
 where ${}^{\dagger}$ is defined via the canonical Hermitian metric on $E$. As usual, on $\mathrm{End}(E)$-valued fields it means Hermitian adjoint\footnote{In our convention, all TYM fields are anti-Hermitian.}, on $E$-valued fields conjugate transpose, and on $\mathbb{C}$-valued fields just conjugate.
 
-In full analogy with the adjoint model, we defined the $SU(N)$ \textquote{Fujikawa-Higgs} model via the action
+In full analogy with the adjoint model, we define the $SU(N)$ \textquote{Fujikawa-Higgs} (FH) model via the action
 \begin{subequations}%
   \label{eq:ffh-action}
   \begin{align}%
-    S_{\text{FH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \mathfrak{Re}\left\{(D \xi)^{\dagger} \star D \Phi + {\xi}^{\dagger} \Phi \left[m^2 + g \left({B}^{\dagger} \Phi - {\xi}^{\dagger} \eta\right)\right] \star \mathds{1} \right\} \;,                            \\
-                                                           & = \int \re \left\{ \vphantom{m^2} -{(DB)}^{\dagger} \star D \Phi - {(D \xi)}^{\dagger} \star D \eta + {(D \Phi)}^{\dagger} \star \psi \xi  \right. + \nonumber                                                               \\
-                                                           & + \left. {(D \xi)}^{\dagger} \star \psi \Phi + \left[ m^2 \left( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta \right) + g {\left( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;,
+    S_{\text{FH}} & \equiv s \int \mathfrak{Re}\left\{(D \xi)^{\dagger} \star D \Phi + {\xi}^{\dagger} \Phi \left[m^2 + g ( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta ) \right] \star \mathds{1} \right\} \;,           \\
+                  & = \int \re \left\{ \vphantom{m^2} -{(DB)}^{\dagger} \star D \Phi - {(D \xi)}^{\dagger} \star D \eta + {(D \Phi)}^{\dagger} \star \psi \xi + {(D \xi)}^{\dagger} \star \psi \Phi \right. + \nonumber \\
+                  & + \left. \left[ m^2 ( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta ) + g {( {B}^{\dagger} \Phi - {\xi}^{\dagger} \eta )}^{2} \right] \star \mathds{1}  \right\} \;.
   \end{align}
 \end{subequations}
-
-The potential
+However, the resulting bosonic potential
 \begin{equation}%
   \label{eq:ffh-potential}
-  V_{\text{FH}} \left(B, \Phi\right) = \re \left[m^2 B^{\dagger} \Phi + g {( B^{\dagger} \Phi )}^2\right]
+  V_{\text{FH}} \left({B}^{\dagger}, \Phi\right) = \re \left[m^2 B^{\dagger} \Phi + g {( B^{\dagger} \Phi )}^2\right]
 \end{equation}
-which has non-trivial local minima $(B_0, \Phi_0)$ satisfying $B^{\dagger}_0\Phi_0 = -m^2/2g$.
+is, unfortunately, not bounded from below (or above). Assuming $g \neq 0$, the only critical point,
+\begin{subequations}%
+  \label{eq:saddle-pts}
+  \begin{align}
+    \re ({B}^{\dagger}\Phi) & = -m^2/2g \;, \\
+    \im ({B}^{\dagger}\Phi) & = 0 \;,
+  \end{align}
+\end{subequations}
+is a saddle. There is no analog of~\eqref{eq:afh-eff-action}. In other words, with the Fujikawa-Higgs fields in the fundamental representation of $SU(N)$, and bosonic potential given by~\eqref{eq:ffh-potential}, TYM does not admit spontaneous symmetry breaking, and representation in terms of massive gauge fields.
 
-The relevant moduli is $\mathcal{M} = [\mathcal{A} \times C^{\infty}(E)]/\mathcal{G}$
+\subsection{Realified model}%
 
-The gauge symmetry breaking pattern is the same as the usual adjoint Higgs model. The vacua $(B_0, \Phi_0)$ belong to the Cartan subalgebra $\bigoplus^{N-1} \mathfrak{u}(1)$, and has stabilizer $\mathfrak{h}_0 \equiv \left\{ X \in \mathfrak{su}(N) \; ; \; \mathrm{ad}_{B_0} X = 0, \;\mathrm{ad}_{\Phi_0} X = 0\right\} $ in the vacua moduli. In the trivial neighborhood $\mathfrak{h}_0 \sim \mathfrak{su}(N)$, and away from it spontaneous gauge symmetry breaking occurs, $\mathfrak{h}_0 \subset \mathfrak{su}(N)$. In particular, if the multiplicity $n_j=1$ for all $(b_j, \varphi_j)$ (non-degeneracy), then $\mathfrak{h}_0 \sim \bigoplus^{N-1} \mathfrak{u}(1)$. More generally, if $l \in \left\{1, \ldots, m\right\} $ labels distinct pairs of eigenvalues, and $1 < n_l \leq N \; ; \; \sum_l n_l = N$ (degeneracy), then $\mathfrak{h}_0 \sim \bigoplus_l \mathfrak{su}(n_l) \oplus \bigoplus^{m-1} \mathfrak{u}(1)$. It is worth mentioning that the trivial neighborhood has complete degeneracy ($m=1$).
+One possibility to move forward is to consider the realification (decomplexification) of the fundamental representation of $SU(N)$. This is done by applying the realification functor $\mathcal{F}$ on $\mathbb{C}^N$, forgetting its $\mathbb{C}$-linear structure, and resulting in a real $2N$-dimensional vector space $ \mathbb{C}^N_{\mathbb{R}} \equiv \mathcal{F} (\mathbb{C}^N) $. The functor also realifies the morphisms, $ \mathrm{End} ( {\mathbb{C}}^N_{\mathbb{R}} ) \equiv \mathcal{F} [ \mathrm{End} ( {\mathbb{C}}^N ) ] $, $ \mathrm{Aut} ( {\mathbb{C}}^N_{\mathbb{R}} ) \equiv \mathcal{F} [ \mathrm{Aut}( {\mathbb{C}}^N ) ] $, and implies an embedding $SU(N) \hookrightarrow SO(2N)$~\cite{kostrikin1989a,budinich1988a}. In practice, if $z \in \mathbb{C}^N$, then $z_{\mathbb{R}} = [ \re (z), \im (z) ]^T \in \mathbb{C}^N_\mathbb{R}$, and if $Z \in \mathrm{End}(\mathbb{C}^N)$, then
+\begin{equation}%
+  \label{eq:realified-matrix}
+  Z_{\mathbb{R}} = \begin{pmatrix} \re (Z) & -\im (Z) \\ \im (Z) & \re (Z) \end{pmatrix} \in \mathrm{End}(\mathbb{C}^N_\mathbb{R}) \;.
+\end{equation}
+From now one, we will consider the realified bundle $E_{\mathbb{R}} \equiv P \times_{SU(N)} \mathbb{C}^{N}_\mathbb{R}$. The TYM fields are realified, $(A_{\mathbb{R}}, c_{\mathbb{R}}, \psi_{\mathbb{R}}, \phi_{\mathbb{R}}) \in C^{\infty}(\mathrm{End}(E_{\mathbb{R}}) \otimes \bigwedge \mathbb{R}^4_{\infty} )$, and the Fujikawa-Higgs fields are also realified $(\Phi_{\mathbb{R}}, \eta_{\mathbb{R}}, \xi_{\mathbb{R}}, B_{\mathbb{R}}) \in C^{\infty}(E_{\mathbb{R}} \otimes \bigwedge^0 \mathbb{R}^4_{\infty} )$.
 
-Away from the trivial vacuum, $S_{\text{FH}}$ assumes the form
+We stress that realified $SU(N)$ TYM (TYM$_{\mathbb{R}}$) theories are not the same as full $SO(2N)$ TYM theories. The latter has a much bigger moduli than the former, reflecting the more involved nature of $SO(2N)$ bundles over $\mathbb{R}^4_{\infty}$. In particular, TYM$_{\mathbb{R}}$ only accounts for $SO(2N)$ bundles with 1st Pontryjagin number given by $p_1 (E_{\mathbb{R}}) = -2 k$. Accordingly, the action functional is given by
+\begin{equation}%
+  \label{eq:real-tym-action}
+  S_{\text{TYM}_{\mathbb{R}}} [A_{\mathbb{R}}] \equiv \int \tr_{\mathbb{R}} (F_{\mathbb{R}}^2) = - 8 \pi^2 p_1 \;,
+\end{equation}
+where $\tr_{\mathbb{R}} (\hphantom{F}) \equiv 2\re [ \tr (\hphantom{F}) ] $ is the realified trace. From now one, we will drop the realified notation $_{\mathbb{R}}$ on the fields to avoid cluttering.
+
+The realified BRST algebra remains (mostly) the same,
+\begin{subequations}%
+  \label{eq:real-ffh-fields}
+  \begin{align}
+    s A    & = - Dc + \psi \;,         & s \Phi & = - c \Phi + \eta \;, & s \Phi^{T} & = \Phi^{T} c + \eta^{T} \;,            & \hspace{0pt} \\
+    s c    & = - c^2 + \phi  \;,       & s \eta & = - c \eta  \;,       & s \eta^{T} & =  - \eta^{T} c                 \;,    & \hspace{0pt} \\
+    s \psi & = -D \phi - [c, \phi] \;, & s \xi  & = - c \xi + B \;,     & s \xi^{T}  & = - \xi^{T} c + B^{T}              \;, & \hspace{0pt} \\
+    s \phi & = - [c, \phi]  \;,        & s B    & = - c B  \;,          & s B^{T}    & = B^{T} c                  \;,         & \hspace{0pt}
+  \end{align}
+\end{subequations}
+where ${}^{T}$ is defined via the Euclidean metric on $E_{\mathbb{R}}$. As usual, on $\mathrm{End}(E_{\mathbb{R}})$-valued fields it means adjoint\footnote{TYM$_{\mathbb{R}}$ fields are antisymmetric.}, on $E_{\mathbb{R}}$-valued fields transpose, and on $\mathbb{R}$-valued fields it means identity.
+
+The realified Fujikawa-Higgs (FH$_{\mathbb{R}}$) model is given by the action
+\begin{subequations}%
+  \label{eq:real-ffh-action}
+  \begin{align}%
+    S_{\text{FH}_{\mathbb{R}}} & = s \int \left\{ {(D \xi)}^{T} \star D \Phi + {\xi}^{T} \Phi \left[m^2 + g ( {B}^{T} \Phi - {\xi}^{T} \eta ) \right] \star \mathds{1} \right\} \;,                      \\
+                               & = \int \left\{ \vphantom{m^2} -{(DB)}^{T} \star D \Phi - {(D \xi)}^{T} \star D \eta + {(D \Phi)}^{T} \star \psi \xi + {(D \xi)}^{T} \star \psi \Phi \right. + \nonumber \\
+                               & + \left. \left[ m^2 ( {B}^{T} \Phi - {\xi}^{T} \eta ) + g {( {B}^{T} \Phi - {\xi}^{T} \eta )}^{2} \right] \star \mathds{1}  \right\} \;,
+  \end{align}
+\end{subequations}
+and has bosonic potential
+\begin{equation}%
+  \label{eq:ffh-potential}
+  V_{\text{FH}_{\mathbb{R}}} \left({B}^{T}, \Phi\right) = m^2 B^{T} \Phi + g {( B^{T} \Phi )}^2\right] \;,
+\end{equation}
+bounded from below by the non-trivial minima
+\begin{subequations}%
+  \label{eq:real-ffh-minima}
+  \begin{align}
+    {B}_0    & = (b_0, 0, \ldots, 0)^{T}  \;,       \\
+    {\Phi}_0 & = (\varphi_0, 0, \ldots, 0)^{T}  \;,
+  \end{align}
+\end{subequations}
+where $b_0 \varphi_0 = - m^2/2g \; \forall \; g>0$.
+
+The gauge symmetry breaking pattern is the not same as the usual Higgs model of particle physics due to realification. Consider the standard Higgs with non-trivial vacua $\Phi_0$, and stabilizer $\mathfrak{h}_0 = \left\{ X \in \mathfrak{su}(N) \; ; \; X \Phi_0 = 0\right\} $ in $ \mathcal{V}_0 $. The condition $X \Phi_0 = 0$ forces the 1st row and 1st column of $X$ to vanish, making it effectively of rank $N-1$. This is the usual symmetry breaking pattern: in the trivial vacuum neighborhood $\mathfrak{h}_0 \sim \mathfrak{su}(N)$, while around $\Phi_0$ we have $\mathfrak{h}_0 \sim \mathfrak{su}(N-1)$. Consequentially, $2N-1$ generators are broken, resulting in $2N-1$ massive gauge bosons. In the realified Higgs, however, $\Phi_0$ has stabilizer $\mathfrak{h}_0 = \left\{ X \in \mathfrak{su}(N) \hookrightarrow \mathfrak{so}(2N) \; ; \; X \Phi_0 = 0 \right\} $, where $X$ is of the form~\eqref{eq:realified-matrix}. If its 1st row and 1st column vanish, so does its $(N+1)$-th row and $(N+1)$-th column, making it effectively of rank $2N-2$. Therefore, realification changes the gauge symmetry breaking pattern from $\mathfrak{su}(N) \mapsto \mathfrak{su}(N-1)$ to $\mathfrak{so}(2N) \mapsto \mathfrak{so}(2N-2)$. Now, $4N-3$ generators are broken, equating to $4N-3$ massive gauge boson. Clearly, realification amplifies the gauge symmetry breaking, increasing by $2N-2$ the number of massive gauge bosons\footnote{Similarly to how the embedding $S^1 \hookrightarrow \mathbb{R}^3$ gives $S^1$ more room to knot itself, the realification embedding $SU(N) \hookrightarrow SO(2N)$ gives gauge theories more gauge directions to break.}.
+
+Back to FH$_{\mathbb{R}}$, the non-trivial vacua $(B_0,\Phi_0)$ has stabilizer $\mathfrak{h}_0 = \left\{ X \in \mathfrak{su}(N) \hookrightarrow \mathfrak{so}(2N) \; ; \; X B_0 = 0 \;, X \Phi_0 = 0 \right\} $, where $X$ is of the form~\eqref{eq:realified-matrix}. As we just learned, this means a gauge symmetry breaking pattern $\mathfrak{so}(2N) \mapsto \mathfrak{so}(2N-2)$, resulting in $4N-3$ massive gauge boson. The effective action around this vacua is
 \begin{align}%
   % \label{eq:eff-action}
-  \bar{S}[A, \psi, \phi, \xi, \eta, b] & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) D \star A  \right. +  \nonumber           \\
-                                       & - \left( \mathrm{ad}_{B_0} \mathrm{ad}_{A} \phi + \mathrm{ad}_{\Phi_0} \mathrm{ad}_{A} b \right) \star A + \mathrm{ad}_{\Phi_0} \xi D \star \psi + ( \mathrm{ad}_{\phi} D \xi \; +  \nonumber \\
-                                       & - \mathrm{ad}_{\xi} D \phi + 2 \mathrm{ad}_{\Phi_0}\mathrm{ad}_{A} \xi ) \star \psi - Db \star D \phi - D \xi \star D \eta \; + \nonumber                                                     \\
-                                       & + \left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 + b \phi \right)}^2 \right. +  \nonumber                                                    \\
-                                       & \left. - \left. 2g \left(B_0 \phi + b \Phi_0 + b \phi \right) \xi \eta \vphantom{m^2} \right] \star \mathds{1} \right\}
+  \bar{S}_{\text{FH}_\mathbb{R}} & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) D \star A  \right. +  \nonumber           \\
+                                 & - \left( \mathrm{ad}_{B_0} \mathrm{ad}_{A} \phi + \mathrm{ad}_{\Phi_0} \mathrm{ad}_{A} b \right) \star A + \mathrm{ad}_{\Phi_0} \xi D \star \psi + ( \mathrm{ad}_{\phi} D \xi \; +  \nonumber \\
+                                 & - \mathrm{ad}_{\xi} D \phi + 2 \mathrm{ad}_{\Phi_0}\mathrm{ad}_{A} \xi ) \star \psi - Db \star D \phi - D \xi \star D \eta \; + \nonumber                                                     \\
+                                 & + \left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 + b \phi \right)}^2 \right. +  \nonumber                                                    \\
+                                 & \left. - \left. 2g \left(B_0 \phi + b \Phi_0 + b \phi \right) \xi \eta \vphantom{m^2} \right] \star \mathds{1} \right\}
 \end{align}
-where $\bar{S} \equiv S_{\text{FH}} [A, \psi, \Phi_0 + \phi, \xi, \eta, B_0 + b]$, with quadratic part defined by
+and has quadratic part
 \begin{align}%
   % \label{eq:eff-quad-action}
-  \bar{S}^{(2)} & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) d \star A + \mathrm{ad}_{\Phi_0} \xi d \star \psi \right. +  \nonumber \\
-                & - \left. db \star d\phi - d\xi \star d\eta +\left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 \right)}^2 \right] \star \mathds{1} \right\} \;.
+  \bar{S}^{(2)}_{\text{FH}_\mathbb{R}} & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \phi + \mathrm{ad}_{\Phi_0} b \right) d \star A + \mathrm{ad}_{\Phi_0} \xi d \star \psi \right. +  \nonumber \\
+                                       & - \left. db \star d\phi - d\xi \star d\eta +\left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \phi - \xi \eta \right) + g {\left( B_0 \phi + b \Phi_0 \right)}^2 \right] \star \mathds{1} \right\} \;.
 \end{align}
 Clearly, $\mathrm{ad}_{B_0}\mathrm{ad}_{\Phi_0}$ is the mass matrix acquired by $A$ due to the spontaneous gauge symmetry breaking. The bosonic pair $(b, \phi)$ plays the role of the Higgs boson field and remains massive. The fermionic pair $(\eta,\xi)$ also remains massive and indicates the BRST is not spontaneously broken.
+
+The lack of minim relevant moduli is $\mathcal{M} = [\mathcal{A} \times C^{\infty}(E)]/\mathcal{G}$
 
 The second and third term can be eliminated via the (A)SDL gauge fixing. Mean
 \begin{subequations}%
