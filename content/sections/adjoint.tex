@@ -2,13 +2,13 @@
 
 \begin{document}
 
-\section{Adjoint Fujikawa-Higgs}%
+\section{Adjoint TYMH theories}%
 \label{sec:higgs}
-The traditional Higgs action functional is $\mathrm{g}$ metric-contaminated, and not an $s$-boundary. This is not an ideal candidate to couple to TYM as it would explicitly break its topological symmetries. Simultaneously, this naive introduction of a scalar field would give non-vanishing contributions to the Witten index of the surviving (and no longer topological) BRST symmetry.
+The traditional Higgs action functional is $\mathrm{g}$ metric-contaminated, and not an $s$-boundary. This is not an ideal candidate to couple to TYM as it would explicitly break its topological symmetries. Simultaneously, a naïve introduction of a scalar field gives non-vanishing contributions to the Witten index of the surviving (and no longer topological) BRST symmetry, jeopardizing the spontaneous symmetry breaking scenario.
 
-In order to preserve all TYM symmetries, including the possibility of topological BRST instability, we build upon the Higgs-like toy model first proposed by K.~Fujikawa~\cite{fujikawa1983a}. Fujikawa's original work is not in a gauge invariant, so what follows is our gauge invariant generalizations of it, here in the adjoint, and later in the fundamental representation of $\mathfrak{su}(N)$, serving as natural candidates to couple to TYM theories.
+To circumvent these issues, we build upon the Higgs-like toy model first proposed by K.~Fujikawa in~\cite{fujikawa1983a}. Fujikawa's original work is not gauge invariant, so what follows is our gauge invariant generalizations of it, first in the adjoint, and later in the fundamental (and realified fundamental) representations of $SU(N)$. Albeit we focus on the coupling to TYM, the methodology below can be adapted to other topological gauge theories regardless of the spacetime dimension they are defined on.
 
-Let $\Phi (x)$, $\eta (x)$, $\xi (x)$, and $B (x)$, be elements in $C^{\infty} ( \mathrm{ad} P \otimes \bigwedge^0 \mathbb{R}_{\infty}^{4} )$ obeying the algebra,
+Consider the field variables $\Phi (x)$, $\eta (x)$, $\xi (x)$, $B (x)$, in $C^{\infty} ( \mathrm{ad} P \otimes \bigwedge^0 \mathbb{R}_{\infty}^{4} )$, and obeying the algebra
 \begin{subequations}%
   \label{eq:afh-brst}
   \begin{align}
@@ -18,12 +18,108 @@ Let $\Phi (x)$, $\eta (x)$, $\xi (x)$, and $B (x)$, be elements in $C^{\infty} (
     s B    & = -\left[c, B\right]  \;.
   \end{align}
 \end{subequations}
-Introduced in pairs of $s$-doublets, this quartet of fields can only build gauge invariant polynomials which are $s$-boundaries. This is a well-known result in BRST algebra justifying the choice of action functional~\eqref{eq:afh-action}, and implying that the $s$-cohomology groups are preserved: no new observables are introduced, especially $\mathrm{g}$ metric-contaminated ones. Additionally, $s$-doublets give vanishing contributions to the Witten index of $s$, thus preserving the potential BRST instability.
+We will refer to them as adjoint Fujikawa-Higgs (aFH) fields, and their statistics can be found at Table~\ref{tab:gradings}. Introduced as a pair of $s$-doublets, aFH fields can only build gauge invariant polynomials which are $s$-boundaries. This is a general result in BRST algebra, known as the \textit{doublet theorem}. It justifies the form of the action functional~\eqref{eq:afh-action-s-exact}, also implying that the $s$-cohomology groups are explicitly preserved: no new observables are introduced, especially no $\mathrm{g}$ metric-contaminated ones. In other words, the topological symmetries are left untouched. Additionally, $s$-doublets generically give vanishing contributions to the Witten index of $s$. In this way, their introduction cannot naïvely change the BRST (in)stability scenario. % chktex 36
 
-% Note the pairs $(\Phi, \eta)$ and $(\xi, B)$ form $s$-doublets. Introduced in this way, this quartet of scalar fields can only generate invariant polynomials which are $s$-boundaries. This is a well-known theorem of the BRST algebra, which justifies the choice of action functional below, and implies the $s$-cohomology groups are preserved --- \textit{i.e.}, no new observables are introduced, especially no $\mathrm{g}$ metric-contaminated ones. Additionally, $s$-doublets give vanishing contributions to the Witten index of $s$, thus preserving the potential for BRST instability.
+We choose to minimally couple TYM and aFH fields, defining the Fujikawa-Higgs sector of the $SU(N)$ invariant \textquote{adjoint topological Yang-Mills-Higgs} (aTYMH) theories via the action functional
+\begin{subequations}%
+  \label{eq:afh-action}
+  \begin{align}%
+    % S_{\text{aFH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                      \label{eq:afh-action-s-exact} \\
+    S_{\text{aFH}} \left[ \Xi \right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                      \label{eq:afh-action-s-exact} \\
+                                      & = \int \tr \left\{ -DB \star D \Phi - D \xi \star D \eta + \left( \mathrm{ad}_{\Phi}D \xi - \mathrm{ad}_{\xi} D \Phi \right) \star \psi \vphantom{m^2} \right. + \nonumber                  \\
+                                      & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;, \label{eq:afh-action-full}
+  \end{align}
+\end{subequations}
+where $\Xi$ is shorthand for $A, \psi, \Phi, \eta, \xi, B$; $m^2$ and $g$ are mass and coupling parameters, respectively, and; $\star \mathds{1}$ is the unitary volume 4-form on spacetime\footnote{This functional is, in fact, agnostic about the spacetime dimension.}. This is not the most general minimally coupled $s$-boundary we could have built out of aFH fields. The addition of more terms, \textit{e.g.}, $s \tr (D \xi \star DB)$, most likely benefits its renormalizability properties, but does not alter its symmetry breaking patterns. Additionally, we have omitted all $c$-vertices from~\eqref{eq:afh-action-full}, which is equivalent to work with the already mentioned Cartan model --- isomorphic to the Kalkman model in the subspace of basic forms. It can be shown that the integrand in~\eqref{eq:afh-action-s-exact} is indeed a basic form.
+
+For convenience, we will work with the Cartan model whenever we are dealing with basic forms. Explicitly,
+\begin{subequations}%
+  \label{eq:cartan-model-afh-brst}
+  \begin{align}
+    s A    & =   \psi \;,   & s \Phi & =   \eta \;, & \hspace{200pt} \\
+    s \psi & =  - D\phi \;, & s \eta & = 0 \;,      & \hspace{200pt} \\
+    s \phi & = 0 \;,        & s \xi  & =  B  \;,    & \hspace{200pt} \\
+    s F    & = -D\psi       & s B    & = 0      \;, & \hspace{200pt}
+  \end{align}
+\end{subequations}
+and, now, $s$ is nilpotent only up to infinitesimal gauge transformations, $\delta_{\phi} \equiv - s^2$, generated by $\phi$. The integrand~\eqref{eq:afh-action-s-exact} is basic precisely because it is independent of $\phi$, and invariant under $\delta_{\phi}$. The aFH fields also individually fit this definition, further implying they all commute with $\phi$.
+
+We focus on the bosonic potential
+\begin{equation}%
+  \label{eq:potential}
+  V_{\text{aFH}} \left(\Phi, B\right) = \tr \left[m^2 B \Phi + g {( B \Phi )}^2\right]
+\end{equation}
+with non-trivial local minima
+\begin{subequations}%
+  \label{eq:minima}
+  \begin{align}
+    B_0    & \equiv \mathrm{diag} \left(b_1, \ldots, b_N \right) \;,             \\
+    \Phi_0 & \equiv \mathrm{diag} \left(\varphi_1, \ldots, \varphi_N \right) \;,
+  \end{align}
+\end{subequations}
+where each pair of eigenvalues $(b_j, \varphi_j)$ must solve
+\begin{subequations}%
+  \label{eq:eigenvalues-conditions}
+  \begin{align}
+    m^2 b_j + 2g b_j^2 \varphi_j +\alpha        & = 0 \;,  \\
+    m^2 \varphi_j + 2g b_j \varphi_j^2  + \beta & = 0 \;,  \\
+    \textstyle\sum_{j} b_j                      & = 0 \;,  \\
+    \textstyle \sum_j \varphi_j                 & = 0 \;,  \\
+    \Delta_k                                    & > 0  \;.
+  \end{align}
+\end{subequations}
+Einstein sum convention is not assumed in~\eqref{eq:eigenvalues-conditions}, and indexes run as $j \in \left\{ 1, \ldots, N \right\} $, $k \in \left\{ 5, \ldots, 2+2N \right\} $. The parameters $\alpha, \beta \in \mathbb{R}$ are Lagrange multipliers enforcing the traceless condition characteristic of $\mathfrak{su}(N)$ matrices, and $\Delta_k$ is the determinant of the leading $k \times k $ principal minor of the bordered Hessian of $V_{\text{aFH}}$. We stress these are sufficient, but not strictly necessary conditions. For instance, if $N=2$, then only one independent Casimir operator exists, implying $\tr [ {(B \Phi)}^2 ] \propto { [ \tr ( B \Phi ) ] }^2$. In such case, solving~\eqref{eq:eigenvalues-conditions} can be completely avoided by simply \textquote{completing the square} in~\eqref{eq:potential}.
+
+The gauge symmetry breaking pattern is the same as the adjoint Higgs from particle physics. First, $(B_0, \Phi_0)$ are always valued in the Cartan subalgebra $\bigoplus^{N-1} \mathfrak{u}(1)$ of $\mathfrak{su}(N)$, and have stabilizer $\mathfrak{h}_0 = \left\{ X \in \mathfrak{su}(N) \; ; \; \mathrm{ad}_{B_0} X = 0, \;\mathrm{ad}_{\Phi_0} X = 0\right\} $ in the minima moduli $\mathcal{V}_0$. In the trivial neighborhood, $\mathfrak{h}_0 \sim \mathfrak{su}(N)$. Away from it, gauge symmetry is spontaneously broken, $\mathfrak{h}_0 \subset \mathfrak{su}(N)$. Specifically, in a region where the multiplicity of all $(b_j, \varphi_j)$ is $n_j=1$ (non-degeneracy), then $\mathfrak{h}_0 \sim \bigoplus^{N-1} \mathfrak{u}(1)$. In a region where $l \in \left\{1, \ldots, m\right\} $ labels distinct pairs of eigenvalues, and $1 < n_l \leq N \; ; \; \sum_l n_l = N$ (some degeneracy), then $\mathfrak{h}_0 \sim \bigoplus_l \mathfrak{su}(n_l) \oplus \bigoplus^{m-1} \mathfrak{u}(1)$. The region of complete degeneracy ($m=1$) is the trivial neighborhood.
+
+Our action functional~\eqref{eq:afh-action}, in the neighborhood of $(B_0, \Phi_0)$, assumes the form
+\begin{subequations}%
+  \label{eq:afh-eff-action}
+  \begin{align}%
+    \bar{S}_{\text{aFH}} \left[ \bar{\Xi} \right] & = \bar{s} \int \tr \left\{ D \xi \star D\varphi + \mathrm{ad}_{\Phi_0} D \xi \star A + \xi ( \Phi_0 + \varphi ) \left[ m^2 + g ( B_0 \Phi_0 \right. + \right.                                                      \nonumber   \\
+                                                  & \left. + \left.  B_0 \varphi + b \Phi_0 + b \varphi - \xi \eta ) \vphantom{m^2} \right] \star \mathds{1} \right\}     \;,                \label{eq:afh-eff-action-exact}                                                       \\
+                                                  & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \varphi + \mathrm{ad}_{\Phi_0} b \right) D \star A  + \mathrm{ad}_{\Phi_0} \xi D \star \psi \right. +  \nonumber \\
+                                                  & - Db \star D \varphi - D \xi \star D \eta - \left( \mathrm{ad}_{B_0} \mathrm{ad}_{A} \varphi + \mathrm{ad}_{\Phi_0} \mathrm{ad}_{A} b \right) \star A + ( \mathrm{ad}_{\varphi} D \xi \; +  \nonumber                          \\
+                                                  & - \mathrm{ad}_{\xi} D \varphi + 2 \mathrm{ad}_{\Phi_0}\mathrm{ad}_{A} \xi ) \star \psi + \left[ ( m^2 + 2g B_0 \Phi_0 ) ( b \varphi - \xi \eta ) + g \left( B_0 \varphi \right. + \right. \nonumber                            \\
+                                                  & \left. + \left. \left.  b \Phi_0 + b \varphi - \xi \eta \right)^2 \right] \star \mathds{1} \right\} \;, \label{eq:afh-eff-action-full}                                                                                         % chktex 3
+  \end{align}
+\end{subequations}
+where $\bar{S}_{\text{aFH}} \left[ \bar{\Xi} \right] \equiv S_{\text{aFH}} [A, \psi, \Phi_0 + \varphi, \eta, \xi, B_0 + b]$; $\bar{\Xi}$ is shorthand for $A, \psi, \varphi, \eta, \xi, b$, and; $\bar{s}$ is given by~\eqref{eq:afh-bar-brst}. In particular, its quadratic part
+\begin{align}%
+  \label{eq:afh-eff-quad-action}
+  \bar{S}_{\text{aFH}}^{(2)} \left[ \bar{\Xi} \right] & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \varphi + \mathrm{ad}_{\Phi_0} b \right) d \star A + \mathrm{ad}_{\Phi_0} \xi d \star \psi \right. +  \nonumber \\
+                                                      & - \left. db \star d\varphi - d\xi \star d\eta +\left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \varphi - \xi \eta \right) + g {\left( B_0 \varphi + b \Phi_0 \right)}^2 \right] \star \mathds{1} \right\}
+\end{align}
+makes very clear that the effective gauge field has mass defined by the mass matrix $\mathrm{ad}_{B_0}\mathrm{ad}_{\Phi_0}$. This is, of course, a direct reflection of the spontaneous gauge symmetry breaking described above. The terms proportional to $d \star A$ and $d \star \psi$ are removable via gauge fixing. And, the massive bosonic pair $(b, \varphi)$ plays the role similar to the Higgs boson field, with $(\xi,\eta)$ being its massive fermionic partner. Note that $(\xi,\eta)$ only kept its mass due to the factor $m^2+2gB_0\Phi_0$ not identically vanishing given the \textquote{adjointness} of our fields.
+
+No massless fermion is present in~\eqref{eq:afh-eff-action}, which indicates the topological BRST symmetry is unbroken at tree-level. The effective BRST, given by
+\begin{subequations}%
+  \label{eq:afh-bar-brst}
+  \begin{align}
+    \bar{s} A    & =   \psi \;,   & \bar{s} \varphi & =   \eta \;,    & \hspace{200pt}                            \\
+    \bar{s} \psi & =  - D\phi \;, & \bar{s} \eta    & = 0 \;,         & \hspace{200pt}                            \\
+    \bar{s} \phi & = 0 \;,        & \bar{s} \xi     & =  B_0 + b  \;, & \hspace{200pt}\label{eq:afh-bar-brst-ssb} \\
+    \bar{s} F    & = -D\psi       & \bar{s} b       & = 0      \;,    & \hspace{200pt}
+  \end{align}
+\end{subequations}
+indeed remains nilpotent (up to $\delta_{\phi}$), and isomorphic to~\eqref{eq:cartan-model-afh-brst}. The effective action~\eqref{eq:afh-eff-action-full} can be written as the $\bar{s}$-boundary~\eqref{eq:afh-eff-action-exact}, which automatically makes it a $\bar{s}$-cycle\footnote{The use of the Cartan model is justified because the integrand in~\eqref{eq:afh-eff-action-exact} is basic. This is somewhat surprising given to the explicit presence of $A$ outside $D$. We attribute this to the tree-level stability of the BRST\@. As long as $s(B_0, \Phi_0) = (0,0)$, the basicness of $(B,\Phi)$ gets passed down to $(B_0, \Phi_0)$, and to $(b,\varphi)$, ultimately ensuring basicness of the integrand (and the nilpotency of $\bar{s}$ on it).}. On the other hand, if $\langle b\rangle = 0$,~\eqref{eq:afh-bar-brst-ssb} implies that $\langle \bar{s} \xi \rangle = B_0 $. As long as $B_0 \neq 0$, this is a sufficient condition for spontaneous BRST symmetry breaking, which in turn implies the presence of Nambu-Goldstone fermionic states~\cite{fujikawa1983a,witten1982a,witten1981a,salam1974a}. Since no such degrees of freedom are present at tree-level, they must be generated by loop corrections or non-perturbative effects. Saying it differently, the lack of a Nambu-Goldstone fermion in~\eqref{eq:afh-eff-action} implies that quantum aTYMH theories, in this region of the moduli, do not have the luxury of being tree-level exact --- regardless of the choice of gauge fixing conditions. Simultaneously, the BRST cohomology complex no longer fully captures their complete set of physical states.
+
+The energy functional, evaluated from~\eqref{eq:afh-action}, is bulk trivial
+\begin{subequations}%
+  \label{eq:afh-energy}
+  \begin{align}
+    \mathbb{E}_{\text{aFH}} \left[ \Xi ; r\right] & =  \int_{B^3_r} \tr \left\{ \mathcal{L}_{\lambda}c \star ( \mathrm{ad}_{\Phi} D \xi - \mathrm{ad}_{\xi} D \Phi) + s \left[ \vphantom{m^2} \mathcal{L}_{\lambda} \Phi \star D \xi + D \xi (\lambda\rfloor \star D \Phi) \right. + \right. \nonumber \\
+                                                  & \left. + \left. \mathrm{ad}_\xi \star D \Phi (\lambda \rfloor A) + \xi \Phi [ m^{2} + g ( B \Phi - \xi \eta ) ] ( \lambda \rfloor \star \mathds{1} ) \right] \right\}                                                                              \\
+                                                  & =  \int_{B^3_r}\tr \left[ \vphantom{m^2} \mathcal{L}_{\lambda} B \star D \Phi - \mathcal{L}_{\lambda} \Phi \star DB + \mathcal{L}_{\lambda} \eta \star D \xi - \mathcal{L}_{\lambda} \xi \star D \eta \right. + \nonumber                          \\
+                                                  & + \left. ( \mathrm{ad}_{\Phi} \mathcal{L}_{\lambda} \xi + \mathrm{ad}_{\xi} \mathcal{L}_{\lambda} \Phi ) \star \psi - (\lambda \rfloor \mathfrak{L}_{\text{aFH}}) \vphantom{m^2} \right] \;,
+  \end{align}
+\end{subequations}
+where $\mathcal{L}_{\lambda} \equiv d \lambda \rfloor + \lambda \rfloor d$ is the Lie derivative along $\lambda$, $\mathfrak{L}_{\text{aFH}}$ is the Lagrangian 4-form in~\eqref{eq:afh-action-full}. The non-exact piece, containing two $c$-vertices, is removable via gauge fixing\footnote{The canonical energy-momentum 3-form of a non-Abelian gauge theory generally does not originate from a basic form. This makes the Kalkman model unavoidable, resulting in the resurrection of $c$. However, if temporal gauge conditions ($\lambda \rfloor A = \lambda \rfloor \psi =0$) are assumed, then $\mathcal{L}_{\lambda}c$ identically vanishes in the bulk.}. In this sense, the situation around the trivial vacuum is quite similar to pure TYM theories, as every classical field configuration in the bulk is part of the vacua moduli. Unsurprisingly, the same can be said about the effective energy functional $\bar{\mathbb{E}}_{\text{aFH}}$, evaluated from~\eqref{eq:afh-eff-action}. However, due to the BRST instability at quantum level, we fully expect $\langle \bar{\mathbb{E}}_{\text{aFH}} \rangle $ to be bulk non-trivial. From a perturbative QFT perspective, this scenario very closely resembles the Coleman-Weinberg mechanism~\cite{coleman1973a}. And, it exemplifies a clearly non-topological effective feature of quantum aTYMH theories.
+
+We are finally ready to make a few comments about the possible presence of solitonic degrees of freedom around $(B_0, \Phi_0)$. In the traditional Yang-Mills-Higgs model, the inequivalent gauge vacua form the moduli of flat connections, homotopically equivalent to a point. The homotopy of the adjoint Higgs sector alone, here $\pi_2 (SU(N)/{U(1)}^{m-1}) \sim \mathbb{Z}^{m-1}$, is thus sufficient to determine that $m-1$ independent topological solitons of spatial co-dimension 3 localize in $\mathbb{R}^4_{\infty}$. A Riemannian or Lorentzian structure then implies these are vertices or monopoles, respectively. However, in aTYMH theories the effective gauge vacua is the entire gauge moduli $\mathcal{A}_\mathcal{H}/\mathcal{H}$, most definitely not homotopic to a point. Contributions from all these gauge vacua can potentially destabilize Higgs sector solitons, and \textit{vice versa}. Thus, a careful analysis of the complete moduli $[\mathcal{A}_{\mathcal{H}} \times C^{\infty} (\mathrm{ad}P_{\mathcal{H}})] / \mathcal{H} $ seems unavoidable in the classical realm\footnote{This is a very hard problem which is beyond our scope.}. On the other hand, as we have discussed, the quantum realm of these theories suffer from BRST instability, implying $\langle \bar{\mathbb{E}}_{\text{aFH}}\rangle \neq 0 $ in the bulk. This latter fact localizes the gauge vacua back on the moduli of flat connections, ensuring that the Higgs sector vertices/monopoles are quantum mechanically stable.
 
 \begin{table}[htpb]
-  \caption{Grading of all TYM and Fujikawa-Higgs fields.}%
+  \caption{Grading of all TYM fields, and the representation-independent FH fields.}%
   \label{tab:gradings} \begin{tabular}{cccccccccccc} \toprule
     Field      & $A$ & $F$  & $c$ & $\psi$ & $\phi$ & $\Phi$ & $\eta$ & $\xi$ & $B$  \\
     \midrule
@@ -34,118 +130,4 @@ Introduced in pairs of $s$-doublets, this quartet of fields can only build gauge
   \end{tabular}
 \end{table}
 
-We define the $SU(N)$ gauge invariant \textquote{adjoint Fujikawa-Higgs} (aFH) model via the action functional
-\begin{subequations}%
-  \label{eq:afh-action}
-  \begin{align}%
-    S_{\text{aFH}} \left[A, \psi, \Phi, \xi, \eta, B\right] & \equiv s \int \tr \left\{D \xi \star D \Phi + \xi \Phi \left[m^2 + g \left(B \Phi - \xi \eta\right)\right] \star \mathds{1} \right\} \;,                      \label{eq:afh-action-s-exact} \\
-                                                            & = \int \tr \left\{ -DB \star D \Phi - D \xi \star D \eta + \left( \mathrm{ad}_{\Phi}D \xi - \mathrm{ad}_{\xi} D \Phi \right) \star \psi \vphantom{m^2} \right. + \nonumber                  \\
-                                                            & + \left. \left[ m^2 \left( B \Phi - \xi \eta \right) + g {\left( B \Phi - \xi \eta \right)}^{2} \right] \star \mathds{1}  \right\} \;, \label{eq:afh-action-full}
-  \end{align}
-\end{subequations}
-where $m^2$ and $g$ are immediately recognizable as mass and coupling parameters, respectively, while $\star \mathds{1}$ is the unitary volume 4-form on spacetime. This is not the most general $s$-boundary we could have built out of $\Phi, \xi, \eta$ and $B$. Adding more terms most likely benefits its renormalizability properties, but does not alter its symmetry breaking patterns. In fact, we have omitted all vertices containing $c$ from~\eqref{eq:afh-action-full} because~\eqref{eq:afh-action-s-exact} is a (integrated) gauge invariant polynomial. This is equivalent to work in the already mentioned Cartan model, isomorphic to the BRST model in the subspace of gauge invariant polynomials. For convenience, we will work with the Cartan model whenever $s$ is being applied to a gauge invariant polynomial. For future reference,
-\begin{subequations}%
-  \label{eq:cartan-model-afh-brst}
-  \begin{align}
-    s A    & =   \psi \;,   \\
-    s \psi & =  - D\phi \;, \\
-    s \phi & = 0 \;,        \\
-    s \Phi & =   \eta \;,   \\
-    s \eta & = 0 \;,        \\
-    s \xi  & =  b  \;,      \\
-    s B    & = 0 \;,
-  \end{align}
-\end{subequations}
-and it should be noticed that $s$ is nilpotent only up to a gauge transformation generated by $\phi$. In other words, in the Cartan model, $s$ is nilpotent only in the subspace of gauge invariant polynomials.
-
-We focus on the bosonic potential
-\begin{equation}%
-  \label{eq:potential}
-  V_{\text{aFH}} \left(B, \Phi\right) = \tr \left[m^2 B \Phi + g {( B \Phi )}^2\right]
-\end{equation}
-which has non-trivial local minima
-\begin{subequations}%
-  \label{eq:minima}
-  \begin{align}
-    B_0    & \equiv \mathrm{diag} \left(b_1, \ldots, b_N \right) \;,             \\
-    \Phi_0 & \equiv \mathrm{diag} \left(\varphi_1, \ldots, \varphi_N \right) \;.
-  \end{align}
-\end{subequations}
-Each pair of eigenvalues $(b_j, \varphi_j)$ must satisfy
-\begin{subequations}%
-  \label{eq:eigenvalues-conditions}
-  \begin{align}
-    m^2 b_j + 2g b_j^2 \varphi_j +\alpha        & = 0 \;,  \\
-    m^2 \varphi_j + 2g b_j \varphi_j^2  + \beta & = 0 \;,  \\
-    \textstyle\sum_{j} b_j                      & = 0 \;,  \\
-    \textstyle \sum_j \varphi_j                 & = 0 \;,  \\
-    \Delta_k                                    & > 0  \;,
-  \end{align}
-\end{subequations}
-where indexes run\footnote{Einstein sum convention is not assumed.} as $j \in \left\{ 1, \ldots, N \right\} $, $k \in \left\{ 5, \ldots, 2+2N \right\} $. The parameters $\alpha, \beta \in \mathbb{R}$ are Lagrange multipliers enforcing the traceless conditions on $\mathfrak{su}(N)$ matrices, and $\Delta_k$ is the determinant of the leading $k \times k $ principal minor of the bordered Hessian of $V_{\text{aFH}}$. It is worth mentioning these are sufficient, but not always necessary conditions on the minima of $V_{\text{aFH}}$\footnote{For instance, if $N=2$ there exists only one independent Casimir operator, and $\tr [ {(B \Phi)}^2 ] \propto { [ \tr ( B \Phi ) ] }^2$. Solving~\eqref{eq:eigenvalues-conditions} can then be completely avoided by simply \textquote{completing the square} in~\eqref{eq:potential}.}.
-
-The gauge symmetry breaking pattern is the same as the adjoint Higgs of particle physics. First, the minima $(B_0, \Phi_0)$ are always valued in Cartan subalgebra $\bigoplus^{N-1} \mathfrak{u}(1)$ of $\mathfrak{su}(N)$, and has stabilizer $\mathfrak{h}_0 = \left\{ X \in \mathfrak{su}(N) \; ; \; \mathrm{ad}_{B_0} X = 0, \;\mathrm{ad}_{\Phi_0} X = 0\right\} $ in the minima moduli $\mathcal{V}_0$. In the trivial neighborhood, $\mathfrak{h}_0 \sim \mathfrak{su}(N)$. Away from it, spontaneous gauge symmetry breaking occurs, $\mathfrak{h}_0 \subset \mathfrak{su}(N)$. In particular, if the multiplicity for of all $(b_j, \varphi_j)$ is $n_j=1$ (non-degeneracy), then $\mathfrak{h}_0 \sim \bigoplus^{N-1} \mathfrak{u}(1)$. More generally, if $l \in \left\{1, \ldots, m\right\} $ labels distinct pairs of eigenvalues, and $1 < n_l \leq N \; ; \; \sum_l n_l = N$ (degeneracy), then $\mathfrak{h}_0 \sim \bigoplus_l \mathfrak{su}(n_l) \oplus \bigoplus^{m-1} \mathfrak{u}(1)$. The trivial neighborhood in $\mathcal{V}_0$  is the case of complete degeneracy ($m=1$).
-
-In this non-trivial neighborhood of $\mathcal{V}_0$,~\eqref{eq:afh-action}  assumes the form
-\begin{subequations}%
-  \label{eq:afh-eff-action}
-  \begin{align}%
-    \bar{S}_{\text{aFH}}[A, \psi, \varphi, \xi, \eta, b] & = \bar{s} \int \tr \left\{ D \xi \star D\varphi + \mathrm{ad}_{\Phi_0} D \xi \star A + \xi ( \Phi_0 + \varphi ) \left[ m^2 \right. + \right.                                                      \nonumber \\
-                                                         & \left. + \left. g ( B_0 \Phi_0 + B_0 \varphi + b \Phi_0 + b \varphi - \xi \eta ) \vphantom{m^2} \right] \star \mathds{1} \right\}     \;,                \label{eq:afh-eff-action-exact}                    \\
-                                                         & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \varphi + \mathrm{ad}_{\Phi_0} b \right) D \star A  \right. +  \nonumber                      \\
-                                                         & - \left( \mathrm{ad}_{B_0} \mathrm{ad}_{A} \varphi + \mathrm{ad}_{\Phi_0} \mathrm{ad}_{A} b \right) \star A + \mathrm{ad}_{\Phi_0} \xi D \star \psi + ( \mathrm{ad}_{\varphi} D \xi \; +  \nonumber         \\
-                                                         & - \mathrm{ad}_{\xi} D \varphi + 2 \mathrm{ad}_{\Phi_0}\mathrm{ad}_{A} \xi ) \star \psi - Db \star D \varphi - D \xi \star D \eta \; + \nonumber                                                             \\
-                                                         & + \left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \varphi - \xi \eta \right) + g {\left( B_0 \varphi + b \Phi_0 + b \varphi \right)}^2 \right. +  \nonumber                                                         \\
-                                                         & \left. - \left. 2g \left(B_0 \varphi + b \Phi_0 + b \varphi \right) \xi \eta + g \xi \eta \xi \eta \vphantom{m^2} \right] \star \mathds{1} \right\} \;, \label{eq:afh-eff-action-full}
-  \end{align}
-\end{subequations}
-where $\bar{S} \equiv S_{\text{aFH}} [\Phi_0 + \varphi, B_0 + b]$, and $\bar{s}$ is given by~\eqref{eq:afh-bar-brst}. In particular, its quadratic part
-\begin{align}%
-  \label{eq:afh-eff-quad-action}
-  \bar{S}_{\text{aFH}}^{(2)} & = \int \tr \left\{ \vphantom{m^2} \mathrm{ad}_{B_0} \mathrm{ad}_{\Phi_0} A \star A + \left( \mathrm{ad}_{B_0} \varphi + \mathrm{ad}_{\Phi_0} b \right) d \star A + \mathrm{ad}_{\Phi_0} \xi d \star \psi \right. +  \nonumber \\
-                             & - \left. db \star d\varphi - d\xi \star d\eta +\left[ ( m^2 + 2g B_0 \Phi_0 ) \left( b \varphi - \xi \eta \right) + g {\left( B_0 \varphi + b \Phi_0 \right)}^2 \right] \star \mathds{1} \right\}
-\end{align}
-makes very clear that the gauge field has acquired mass defined by the mass matrix $\mathrm{ad}_{B_0}\mathrm{ad}_{\Phi_0}$. This is, of course, a direct consequence of the spontaneous gauge symmetry breaking described above. The terms proportional do $d \star A$ and $d \star \psi$ can be eliminated via gauge fixing. The massive bosonic pair $(b, \varphi)$ plays the role similar to the Higgs boson field. The term proportional to $m^2+2gB_0\Phi_0$ does not vanish in the adjoint representation, and due to that the pair $(\eta,\xi)$ remains massive.
-
-No massless fermions were generated in the effective action above, leading us to conclude that the BRST symmetry is unbroken. It is trivial but pedagogically helpful to mention that, in this case, the effective BRST around $(B_0, \Phi_0)$,
-\begin{subequations}%
-  \label{eq:afh-bar-brst}
-  \begin{align}
-    \bar{s} A       & =   \psi \;,   \\
-    \bar{s} \psi    & = - D \phi \;, \\
-    \bar{s} \phi    & = 0 \;,        \\
-    \bar{s} \varphi & =   \eta \;,   \\
-    \bar{s} \eta    & = 0 \;,        \\
-    \bar{s} \xi     & =  b + B_0 \;, \\
-    \bar{s} B       & = 0 \;,
-  \end{align}
-\end{subequations}
-defined to preserve it, $\bar{s} (B_0, \Phi_0) \equiv (0, 0)$, remains nilpotent and trivially isomorphic to the original BRST in~\eqref{eq:cartan-model-afh-brst}. In fact, in this neighborhood,~\eqref{eq:cartan-model-afh-brst} assumes the form
-\begin{subequations}%
-  \label{eq:eff-afh-brst}
-  \begin{align}
-    s A       & =   \psi \;,   \\
-    s \psi    & = - D \phi \;, \\
-    s \phi    & = 0 \;,        \\
-    s \varphi & =   \eta \;,   \\
-    s \eta    & = 0 \;,        \\
-    s \xi     & =  b + B_0 \;, \\
-    s B       & = 0 \;.
-  \end{align}
-\end{subequations}
-Unsurprisingly,~\eqref{eq:afh-eff-action-full} can be written as the $\bar{s}$-boundary~\eqref{eq:afh-eff-action-exact}, which automatically makes it a $\bar{s}$-cycle.
-
-The \textquote{spontaneous} gauge symmetry breaking that just occurred must not be interpreted as a traditional physical process. Before and after the Higgs phase, bulk energy functional remains trivial due to the BRST stability. The contribution given by~\eqref{eq:afh-action} is
-\begin{subequations}%
-  \label{eq:afh-energy}
-  \begin{align}
-    \mathbb{E}_{\text{aFH}} \left[\ldots ; r\right] & =  \int_{B^3_r} \tr \left\{ \mathcal{L}_{\lambda}c \star ( \mathrm{ad}_{\Phi} D \xi - \mathrm{ad}_{\xi} D \Phi) + s \left[ \vphantom{m^2} \mathcal{L}_{\lambda} \Phi \star D \xi + D \xi (\lambda\rfloor \star D \Phi) \right. + \right. \nonumber \\
-                                                    & \left. + \left. \mathrm{ad}_\xi \star D \Phi (\lambda \rfloor A) + \xi \Phi \left[ m^{2} + g \left( B \Phi - \xi \eta \right) \right] ( \lambda \rfloor \star \mathds{1} ) \right] \right\}                                                        \\
-                                                    & =  \int_{B^3_r}\tr \left[ \vphantom{m^2} \mathcal{L}_{\lambda} B \star D \Phi - \mathcal{L}_{\lambda} \Phi \star DB + \mathcal{L}_{\lambda} \eta \star D \xi - \mathcal{L}_{\lambda} \xi \star D \eta \right. + \nonumber                          \\
-                                                    & + \left. ( \mathrm{ad}_{\Phi} \mathcal{L}_{\lambda} \xi + \mathrm{ad}_{\xi} \mathcal{L}_{\lambda} \Phi ) \star \psi - (\lambda \rfloor \mathfrak{L}_{\text{aFH}}) \vphantom{m^2} \right]
-  \end{align}
-\end{subequations}
-where $\mathcal{L}_{\lambda} \equiv d \lambda \rfloor + \lambda \rfloor d$ is the Lie derivative along $\lambda$, $\mathfrak{L}_{\text{aFH}}$ is the Lagrangian 4-form in~\eqref{eq:afh-action-full}, and the vertices containing $c$ can be eliminated via gauge fixing\footnote{The ghost field $c$ resurrected because the canonical energy-momentum 3-form of a non-Abelian gauge theory is generally not a gauge invariant polynomial. Thus, we had to change back to the BRST model. Nonetheless, if temporal gauge conditions are assumed ($\lambda \rfloor A = \lambda \rfloor \psi =0$), then one can show that $\mathcal{L}_{\lambda}c$ identically vanishes in the bulk. }. In this sense, every physical field configuration in the bulk is part of the vacua moduli. The symmetry breaking did not \textquote{occur} because $(B_0, \Phi_0)$ is energetically favored. In fact, it is not sensible to say anything non-topological \textquote{occurred} in a topological field theory. Thus, the effective action~\eqref{eq:afh-eff-action} should be pragmatically interpreted as a representation of~\eqref{eq:afh-action-full} in the neighborhood of a non-trivial point $(B_0, \Phi_0)$ of the vacua moduli.
-
-A final comment is about the possible presence of solitonic degrees of freedom at the Higgs phase. In the traditional Yang-Mills-Higgs model, the gauge vacua are the moduli of flat connections, homotopically equivalent to a point. Thus, the homotopy of the adjoint Higgs sector alone, here $\pi_2 (SU(N)/{U(1)}^{m-1}) \sim \mathbb{Z}^{m-1}$, is sufficient to determine that $m-1$ independent topological solitons of spatial co-dimension 3 will localize in $\mathbb{R}^4$. A Riemannian or Lorentzian structure would then imply these are vertices or monopoles, respectively. However, in TYM the gauge vacua is the entire gauge moduli $\mathcal{M}$, which is not homotopic to a point and cannot be disregarded. Contributions from all these gauge vacua can potentially destabilize Higgs sector solitons, and \textit{vice versa}. Thus, a careful analysis of the complete moduli $[\mathcal{A}_{\mathcal{H}} \times C^{\infty} (\mathrm{ad}P_{\mathcal{H}})] / \mathcal{H} $ is unavoidable, and out of our scope.
 \end{document}
