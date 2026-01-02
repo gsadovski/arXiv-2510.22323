@@ -1,0 +1,13 @@
+.
+./metadata
+./metadata/titlepage.tex
+./metadata/manuscript.sty
+./content
+./content/sections
+./content/sections/fundamental.tex
+./content/sections/introduction.tex
+./content/sections/conclusions.tex
+./content/sections/adjoint.tex
+./content/sections/tym.tex
+./main.tex
+./main.bbl
